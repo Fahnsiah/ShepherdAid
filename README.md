@@ -1,0 +1,2 @@
+# ShepherdAid
+Church management software
