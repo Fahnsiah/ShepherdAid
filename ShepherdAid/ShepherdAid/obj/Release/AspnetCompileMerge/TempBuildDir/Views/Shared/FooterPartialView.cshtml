@@ -1,0 +1,15 @@
+@*<div class="footerMenu">
+
+    </div>*@
+<div>
+    <p class="text-center">
+        <a href="#">Terms of Use</a> | <a href="#">Privacy</a>
+        <br />
+        @Html.DevExpress().Label(settings =>
+        {
+            settings.EncodeHtml = false;
+            settings.Text = "2012 - " + DateTime.Now.Year + " &copy; Copyright by RITE Inc.";
+        }).GetHtml()
+    </p>
+
+</div>

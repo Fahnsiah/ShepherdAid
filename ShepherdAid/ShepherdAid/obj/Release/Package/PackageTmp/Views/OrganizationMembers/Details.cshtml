@@ -1,0 +1,67 @@
+﻿@model ShepherdAid.Models.OrganizationMember
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OrganizationMember</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MembershipDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MembershipDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RecordedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecordedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateRecorded)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateRecorded)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.MemberID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Member.MemberID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Organization.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Organization.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatusType.StatusName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatusType.StatusName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Roles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+
+    <div class="mybreadcrumb">
+        @Html.ActionLink("User Groups", "Index", "AspNetGroupRoles") >
+        Assigned/Available Roles
+    </div>
+
+
+    @if (TempData["error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissable">
+            <span class="close" data-dismiss="alert" aria-label="close">&times;</span>
+            <strong>Fail!</strong> @TempData["error"]
+        </div>
+        TempData["error"] = null;
+    }
+    <div class="col-md-12 col-xs-12">
+        <h4>User Name: @ViewBag.UserName</h4>
+    </div>
+    <div class="col-md-5 col-xs-12">
+
+        @{Html.RenderAction("AssignedRoles", "AspNetUserRoles", new { id = Session["id"] });}
+
+    </div>
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-5 col-xs-12">
+
+        @{Html.RenderAction("AvailableRoles", "AspNetUserRoles", new { id = Session["id"] });}
+
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/Scripts/Custom/group-roles.js"></script>
+}

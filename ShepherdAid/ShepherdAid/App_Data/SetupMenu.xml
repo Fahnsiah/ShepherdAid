@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu>  
+  <group Text="Users Manager">
+    <item Text="Manage Users" NavigateUrl="/Users/UserList"/>
+    <item Text="Manage Roles" NavigateUrl="/Roles/Index"/>
+  </group>
+  <group Text="Basic Settings">
+    <item Text="Manage Clients" NavigateUrl="/Clients/Index"/>
+    <item Text="Manage Inst. Groups" NavigateUrl="/InstitutionGroups/Clients"/>
+    <item Text="Manage Institutions" NavigateUrl="/Institutions/Clients"/>
+    <item Text="System Variable" NavigateUrl="/SystemVariables/Index"/>
+  </group>
+  <group Text="Lookups Manager">
+    <item Text="Member Type" NavigateUrl="/MemberTypes/Index"/>
+    <item Text="Member Status Type" NavigateUrl="/StatusTypes/Index"/>
+    <item Text="Marital Status Type" NavigateUrl="/MaritalStatusTypes/Index"/>
+    <item Text="Salutation Type" NavigateUrl="/SalutationTypes/Index"/>
+    <item Text="Gender Type" NavigateUrl="/GenderTypes/Index"/>
+    <item Text="Obligation Type" NavigateUrl="/ObligationTypes/Index"/>
+  </group>
+</menu>

@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "UploadPhoto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+
+    <div class="col-md-6 col-xs-12">
+
+        <fieldset>
+            <legend>UPLOAD PHOTO FOR @ViewBag.Name</legend>
+
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+
+                    @using (Html.BeginForm("UploadControlUpload", "Members", FormMethod.Post))
+                {
+                @Html.DevExpress().UploadControl(settings =>
+                    {
+                        settings.Name = "UploadControl";
+                        settings.CallbackRouteValues = new { Controller = "Members", Action = "UploadControlUpload" };
+
+
+                        settings.ShowUploadButton = true;
+                        settings.ShowProgressPanel = true;
+
+                        settings.ValidationSettings.Assign(ShepherdAid.Controllers.MembersControllerUploadControlSettings.UploadValidationSettings);
+                    }).GetHtml()
+                }
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+</div>

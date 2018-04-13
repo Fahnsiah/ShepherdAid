@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ShepherdAid.Models.ReportParishMembersCount_Result>
+
+@{
+    ViewBag.Title = "ParishesMembersSummary";
+    Layout = "~/Views/Shared/_Report.cshtml";
+    string institution = string.Empty, previousValue = string.Empty;
+}
+
+<div class="col-md-12">
+
+    <div class="row">
+        <div class="panel panel-primary">
+            <div class="col-md-11 panel-heading">
+                PARISHES MEMBERS SUMMARY
+            </div>
+            <div class="col-md-1">
+                <p class="text-right">
+                    @Html.ActionLink(" ", "ParishesMembersSummary", "ReportsPrint", new { }, new { @class = "glyphicon glyphicon-print" })
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+        <table class="table table-striped table-bordered">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Institution)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Count)
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @{
+                if (!previousValue.Equals(item.Institution))
+                {
+                    @Html.DisplayFor(modelItem => item.Institution)
+                }
+
+                previousValue = item.Institution;
+                        }
+
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Count)
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+﻿@model ShepherdAid.Models.Client
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="col-md-8 col-xs-12">
+
+    <div class="myinputarea">
+
+        <div class="mybreadcrumb">
+            @Html.ActionLink("Clients", "Index", "Clients") >
+            Detail of Client
+        </div>
+
+        <div>
+            
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Initial)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Initial)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.OfficePhone)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.OfficePhone)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.MobilePhone)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MobilePhone)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.EmailAddress)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EmailAddress)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Address)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Address)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Website)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Website)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.ID })
+        </p>
+    </div>
+
+</div>

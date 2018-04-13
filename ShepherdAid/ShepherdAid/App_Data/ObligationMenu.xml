@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu>
+  
+  <group Text="INDIVIDUALS">
+    <item Text="Set Obligation" NavigateUrl="/Obligations/Members"/>
+    <item Text="Make Payment" NavigateUrl="/Payments/Members"/>
+  </group>
+  <group Text="ORGANIZATIONS">
+    <item Text="Set Obligation" NavigateUrl="/Obligations/Members"/>
+    <item Text="Make Payment" NavigateUrl="/Payments/Members"/>
+  </group>
+  
+</menu>

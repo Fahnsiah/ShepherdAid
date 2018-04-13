@@ -1,0 +1,108 @@
+﻿@model ShepherdAid.Models.OrganizationLeader
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="mybreadcrumb">
+    @Html.ActionLink("Organizations List", "Index", "Organizations") >>
+    @Html.ActionLink("Organization Detail", "Details", "Organizations", new { id = Session["id"] }, null) >>
+    Delete Member
+</div>
+
+<div class="row">
+    <fieldset>
+        <legend>DELETE POSITION OF @Model.Member.FirstName</legend>
+
+        <h3>Are you sure you want to delete this?</h3>
+        <div>
+
+            <dl class="dl-horizontal">
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Organization.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Organization.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.OrganizationPositionType.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.OrganizationPositionType.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.StatusType.StatusName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.StatusType.StatusName)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Member.MemberID)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Member.MemberID)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Member.FirstName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Member.FirstName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Member.MiddleName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Member.MiddleName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Member.LastName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Member.LastName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.StartDate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.StartDate)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.EndDate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EndDate)
+                </dd>
+
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="Delete" class="btn btn-danger form-control" /> 
+                </div>
+            }
+        </div>
+
+    </fieldset>
+</div>
+

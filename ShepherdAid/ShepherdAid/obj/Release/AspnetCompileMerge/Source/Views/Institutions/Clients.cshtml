@@ -1,0 +1,67 @@
+﻿@model IEnumerable<ShepherdAid.Models.Client>
+
+@{
+    ViewBag.Title = "Clients";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-6 col-xs-12">
+
+    <div class="myinputarea">
+
+        <div class="mybreadcrumb">
+            List Clients
+        </div>
+
+        <div class="search-area">
+            <div class=" col-md-11 col-xs-11">
+                @using (Html.BeginForm())
+                {
+                    <div class="input-group">
+                        <input type="text" class="form-control search-field" placeholder="Search" id="search" name="search" />
+                        <div class="input-group-btn">
+                            <button class="btn btn-primary" type="submit">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+
+                        </div>
+                    </div>
+                    @*</form>*@
+                }
+            </div>
+            <div class="col-md-1 col-xs-1 new-record">
+                @*<a href="../AspNetGroups/Create" title="New Group"><span class="glyphicon glyphicon-plus"></span></a>*@
+            </div>
+        </div>
+
+
+        <table class="table table-bordered table-responsive">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OfficePhone)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OfficePhone)
+                    </td>
+                    <td>
+                        @Html.ActionLink(" ", "Index", new { id = item.ID }, new { @class = "glyphicon glyphicon-circle-arrow-right" })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+
+</div>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu>
+  <item Text="Members List" NavigateUrl="/Members/Index"/>
+  <group Text="Member Manage">
+    <item Text="Administered Sacraments" NavigateUrl="/Users/UserList"/>
+    <item Text="Emergency Contacts" NavigateUrl="/Users/UserList"/>
+    <item Text="Dependents" NavigateUrl="/Roles/Index"/>
+  </group>
+  
+</menu>

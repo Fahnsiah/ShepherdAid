@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ShepherdAid.Models.FuncGroupAssignedRoles_Result>
+
+@using (Html.BeginForm("RevokeGroupRoles", "AspNetGroupRoles"))
+{
+    @Html.AntiForgeryToken()
+
+    if (Model.Count() > 0)
+    {
+        <div class="row">
+            <div class="col-md-10 col-xs-12">
+                <h4>Assigned Roles</h4>
+            </div>
+
+            <div class="col-md-2 col-xs-12">
+                <p class="text-right">
+                    <input type="submit" id="revoke" name="revoke" class="btn btn-primary" value="Revove" />
+                </p>
+            </div>
+
+        </div>
+    
+        <table class="table table-responsive">
+            <tr>
+                <th>
+                    <input type="checkbox" name="allassignedroles" id="allassignedroles" value="0" title="Select All" />Check/Uncheck All
+                </th>
+            </tr>
+            @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                <div class="checkbox" id="divassignedcheckbox">
+                    <label>
+                        <input type="checkbox"
+                               name="assignedroles"
+                               id="assignedroles"
+                               value="@item.Id" /> @item.Name
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+        }
+
+        </table>
+    }
+}

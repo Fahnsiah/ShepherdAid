@@ -1,0 +1,113 @@
+﻿@model ShepherdAid.Models.MemberObligation
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>MemberObligation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateStarted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateStarted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateAdjusted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateAdjusted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdjustedBalance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdjustedBalance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RecordedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecordedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateRecorded)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateRecorded)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrencyType.CurrencyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrencyType.CurrencyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.MemberID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Member.MemberID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ObligationStatusType.StatusName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ObligationStatusType.StatusName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ObligationType.ObligationName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ObligationType.ObligationName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RecurranceType.Recurrance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecurranceType.Recurrance)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

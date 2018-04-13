@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "MemberPayment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    //var model = (ShepherdAid.Models.MemberPaymentList_Result)ViewBag.Payment;
+
+    string title = string.Empty;
+}
+<div class="mybreadcrumb">
+    @Html.ActionLink("Paments", "Index", "Payments") >>
+    @Html.ActionLink("Member Obligation", "ActiveObligations", "Payments", new { id = Session["id"] }, null) >>
+    Member Obligations
+</div>
+<fieldset>
+    <legend>@title</legend>
+    <div class="col-md-8">
+        <table class="table table-bordered table-responsive table-striped">
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</fieldset>
+

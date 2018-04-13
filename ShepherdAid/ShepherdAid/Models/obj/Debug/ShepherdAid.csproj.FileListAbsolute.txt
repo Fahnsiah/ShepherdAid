@@ -1,0 +1,219 @@
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\ShepherdAid.dll.config
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\ShepherdAid.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\ShepherdAid.pdb
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Antlr3.Runtime.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\EntityFramework.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\EntityFramework.SqlServer.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Microsoft.AspNet.Identity.Core.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Cookies.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Facebook.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Google.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.OAuth.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Twitter.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Microsoft.Web.Infrastructure.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Newtonsoft.Json.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Owin.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\System.Web.Helpers.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\System.Web.Mvc.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\System.Web.Optimization.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\System.Web.Razor.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\System.Web.WebPages.Deployment.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\System.Web.WebPages.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\System.Web.WebPages.Razor.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\WebGrease.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\System.Web.Helpers.xml
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\System.Web.Mvc.xml
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\System.Web.Optimization.xml
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\System.Web.Razor.xml
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\System.Web.WebPages.xml
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\System.Web.WebPages.Deployment.xml
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\System.Web.WebPages.Razor.xml
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Antlr3.Runtime.pdb
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Newtonsoft.Json.xml
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\EntityFramework.xml
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\EntityFramework.SqlServer.xml
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Microsoft.AspNet.Identity.Core.xml
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.xml
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.xml
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Facebook.xml
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Cookies.xml
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.OAuth.xml
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Google.xml
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Twitter.xml
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\obj\Debug\ShepherdAid.csprojResolveAssemblyReference.cache
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\obj\Debug\ShepherdAid.dll
+D:\TRIAL\2017\MVC\ShepherdAid\ShepherdAid\obj\Debug\ShepherdAid.pdb
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\ShepherdAid.dll.config
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\ShepherdAid.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\ShepherdAid.pdb
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Antlr3.Runtime.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\EntityFramework.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\EntityFramework.SqlServer.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Microsoft.AspNet.Identity.Core.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Cookies.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Facebook.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Google.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.OAuth.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Twitter.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Microsoft.Web.Infrastructure.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Newtonsoft.Json.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Owin.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\System.Web.Helpers.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\System.Web.Mvc.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\System.Web.Optimization.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\System.Web.Razor.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\System.Web.WebPages.Deployment.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\System.Web.WebPages.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\System.Web.WebPages.Razor.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\WebGrease.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\System.Web.Helpers.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\System.Web.Mvc.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\System.Web.Optimization.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\System.Web.Razor.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\System.Web.WebPages.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\System.Web.WebPages.Deployment.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\System.Web.WebPages.Razor.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Antlr3.Runtime.pdb
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Newtonsoft.Json.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\EntityFramework.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\EntityFramework.SqlServer.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Microsoft.AspNet.Identity.Core.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Facebook.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Cookies.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.OAuth.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Google.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Twitter.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\obj\Debug\ShepherdAid.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\obj\Debug\ShepherdAid.pdb
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC\ShepherdAid\ShepherdAid\obj\Debug\ShepherdAid.csprojResolveAssemblyReference.cache
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\ShepherdAid.dll.config
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\ShepherdAid.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\ShepherdAid.pdb
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Antlr3.Runtime.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\EntityFramework.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\EntityFramework.SqlServer.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Microsoft.AspNet.Identity.Core.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Cookies.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Facebook.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Google.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.OAuth.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Twitter.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Microsoft.Web.Infrastructure.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Newtonsoft.Json.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Owin.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\System.Web.Helpers.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\System.Web.Mvc.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\System.Web.Optimization.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\System.Web.Razor.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\System.Web.WebPages.Deployment.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\System.Web.WebPages.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\System.Web.WebPages.Razor.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\WebGrease.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\System.Web.Helpers.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\System.Web.Mvc.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\System.Web.Optimization.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\System.Web.Razor.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\System.Web.WebPages.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\System.Web.WebPages.Deployment.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\System.Web.WebPages.Razor.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Antlr3.Runtime.pdb
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Newtonsoft.Json.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\EntityFramework.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\EntityFramework.SqlServer.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Microsoft.AspNet.Identity.Core.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Facebook.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Cookies.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.OAuth.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Google.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Twitter.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\obj\Debug\ShepherdAid.csprojResolveAssemblyReference.cache
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\obj\Debug\ShepherdAid.dll
+D:\CLIENTS\CHURCH\2017\ShepherdAidMVC - Copy (4)\ShepherdAid\ShepherdAid\obj\Debug\ShepherdAid.pdb
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\ShepherdAid.dll.config
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\ShepherdAid.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\ShepherdAid.pdb
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Antlr3.Runtime.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\EntityFramework.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\EntityFramework.SqlServer.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Microsoft.AspNet.Identity.Core.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Microsoft.AspNet.Identity.Owin.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Host.SystemWeb.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Cookies.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Facebook.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Google.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.OAuth.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Twitter.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Microsoft.Web.Infrastructure.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Newtonsoft.Json.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Owin.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\System.Web.Helpers.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\System.Web.Mvc.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\System.Web.Optimization.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\System.Web.Razor.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\System.Web.WebPages.Deployment.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\System.Web.WebPages.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\System.Web.WebPages.Razor.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\WebGrease.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\System.Web.Helpers.xml
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\System.Web.Mvc.xml
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\System.Web.Optimization.xml
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\System.Web.Razor.xml
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\System.Web.WebPages.xml
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\System.Web.WebPages.Deployment.xml
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\System.Web.WebPages.Razor.xml
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Antlr3.Runtime.pdb
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Newtonsoft.Json.xml
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\EntityFramework.xml
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\EntityFramework.SqlServer.xml
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Microsoft.AspNet.Identity.Core.xml
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Microsoft.AspNet.Identity.Owin.xml
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.xml
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Host.SystemWeb.xml
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.xml
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Facebook.xml
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Cookies.xml
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.OAuth.xml
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Google.xml
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.Twitter.xml
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\obj\Debug\ShepherdAid.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\obj\Debug\ShepherdAid.pdb

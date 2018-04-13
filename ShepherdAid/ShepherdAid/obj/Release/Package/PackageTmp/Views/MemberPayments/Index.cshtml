@@ -1,0 +1,64 @@
+﻿@model IEnumerable<ShepherdAid.Models.MemberPayment>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Remark)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RecordedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateRecorded)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Member.MemberID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MembersObligation.RecordedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Payment.RecordedBy)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Remark)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecordedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateRecorded)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Member.MemberID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MembersObligation.RecordedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Payment.RecordedBy)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

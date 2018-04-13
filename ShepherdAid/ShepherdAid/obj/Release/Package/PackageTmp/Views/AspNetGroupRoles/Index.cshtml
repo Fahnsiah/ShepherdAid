@@ -1,0 +1,84 @@
+﻿@model IEnumerable<ShepherdAid.Models.AspNetGroup>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-8 col-xs-12">
+        <div class="mybreadcrumb">
+            List of User Groups
+        </div>
+
+        <div class="search-area">
+            <div class=" col-md-11 col-xs-11">
+                @using (Html.BeginForm())
+                {
+                    <div class="input-group">
+                        <input type="text" class="form-control search-field" placeholder="Search" id="search" name="search" />
+                        <div class="input-group-btn">
+                            <button class="btn btn-primary" type="submit">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+
+                        </div>
+                    </div>
+                    @*</form>*@
+                }
+            </div>
+            <div class="col-md-1 col-xs-1 new-record">
+                
+            </div>
+        </div>
+
+        @if (Model != null && Model.Count() > 0)
+        {
+            <table class="table table-bordered table-responsive">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Institution.InstitutionGroup.Client.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Institution.InstitutionGroup.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Institution.InstitutionName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.IsActive)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Institution.InstitutionGroup.Client.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Institution.InstitutionGroup.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Institution.InstitutionName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IsActive)
+                        </td>
+                        <td>
+                            @Html.ActionLink(" ", "Roles", new { id = item.ID }, new { @class = "glyphicon glyphicon-circle-arrow-right", @title = "View Group Roles" })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        }
+    </div>
+</div>

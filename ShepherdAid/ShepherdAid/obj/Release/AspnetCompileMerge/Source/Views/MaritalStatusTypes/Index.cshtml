@@ -1,0 +1,71 @@
+﻿@model IEnumerable<ShepherdAid.Models.MaritalStatusType>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+
+    <div class="col-md-5 col-xs-12">
+        <fieldset>
+            <legend>MARITAL STATUS TYPE LIST</legend>
+
+            <div class="row">
+                <div class="search-area">
+                    <div class=" col-md-10 col-xs-10">
+                        @using (Html.BeginForm())
+                        {
+                            <div class="input-group">
+                                <input type="text" class="form-control search-field" placeholder="Search" id="search" name="search" />
+                                <div class="input-group-btn">
+                                    <button class="btn btn-primary" type="submit">
+                                        <span class="glyphicon glyphicon-search"></span>
+                                    </button>
+
+                                </div>
+                            </div>
+                            @*</form>*@
+                        }
+                    </div>
+                    <div class="col-md-1 col-xs-1 new-record">
+                        <a href="../MaritalStatusTypes/Create" title="Create New"><span class="glyphicon glyphicon-plus"></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    @if (Model != null && Model.Count() > 0)
+                    {
+
+                        <table class="table">
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.TypeName)
+                                </th>
+                                <th class="th-action"></th>
+                            </tr>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TypeName)
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink(" ", "Details", new { id = item.ID }, new { @class = "glyphicon glyphicon-th-list", @title = "View Detail" }) |
+                                        @Html.ActionLink(" ", "Edit", new { id = item.ID }, new { @class = "glyphicon glyphicon-edit", @title = "Edit Record" }) |
+                                        @Html.ActionLink(" ", "Delete", new { id = item.ID }, new { @class = "glyphicon glyphicon-trash", @title = "Delete Record" })
+                                    </td>
+                                </tr>
+                            }
+
+                        </table>
+                    }
+                </div>
+            </div>
+
+        </fieldset>
+    </div>
+</div>

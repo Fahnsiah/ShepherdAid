@@ -1,0 +1,28 @@
+﻿@if (Request.IsAuthenticated)
+{
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav pull-down">
+
+            <li class="dropdown">
+                <button class="dropdown-toggle linkbutton" data-toggle="dropdown">
+                    System Users
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="~/UsersReports/Index">User Assigned Roles</a></li>
+                    <li><a href="~/UsersReports/UsersAndGroups">Users and Groups</a></li>
+                    <li><a href="~/UsersReports/Groups">Group Assigned Roles</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <button class="dropdown-toggle linkbutton" data-toggle="dropdown">
+                    Members
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="~/UsersReports/Index">Member List</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+}

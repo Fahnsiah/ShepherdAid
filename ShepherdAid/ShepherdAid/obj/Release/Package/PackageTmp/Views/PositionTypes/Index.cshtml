@@ -1,0 +1,77 @@
+﻿@model IEnumerable<ShepherdAid.Models.PositionType>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="row">
+    <div class="col-md-8 col-xs-12">
+        <div class="mybreadcrumb">
+            Postition List
+        </div>
+
+        <div class="search-area">
+            <div class=" col-md-11 col-xs-11">
+                @using (Html.BeginForm())
+                {
+                    <div class="input-group">
+                        <input type="text" class="form-control search-field" placeholder="Search" id="search" name="search" />
+                        <div class="input-group-btn">
+                            <button class="btn btn-primary" type="submit">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+
+                        </div>
+                    </div>
+                    @*</form>*@
+                }
+            </div>
+            <div class="col-md-1 col-xs-1 new-record">
+                <a href="../PositionTypes/Create" title="New Group"><span class="glyphicon glyphicon-plus"></span></a>
+            </div>
+        </div>
+
+        @if (Model != null && Model.Count() > 0)
+        {
+
+            <table class="table table-striped table-bordered">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Priority)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Priority)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td class="nowrap">
+                            @Html.ActionLink(" ", "Edit", new { id = item.ID }, new { @class = "glyphicon glyphicon-edit", @title = "Edit Record" }) |
+                            @Html.ActionLink(" ", "Delete", new { id = item.ID }, new { @class = "glyphicon glyphicon-trash", @title = "Delete Record" })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        }
+    </div>
+</div>
+

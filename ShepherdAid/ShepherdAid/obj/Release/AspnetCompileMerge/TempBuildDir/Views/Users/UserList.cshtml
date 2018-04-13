@@ -1,0 +1,78 @@
+﻿@model IEnumerable<ShepherdAid.Models.FuncApplicationUsers_Result>
+
+@{
+    ViewBag.Title = "UserList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-6 col-xs-12 myinputarea">
+
+    <p class="text-right">
+        @Html.ActionLink("Create New", "Create", new { }, new { @class = "btn" })
+    </p>
+
+    <h4>List of Users</h4>
+
+    @*<div class="alert alert-success alert-dismissable fade in">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Success!</strong> Password changed successfully.
+    </div>*@
+
+    @if (TempData["pwdchanged"] != null)
+    {
+        <div class="alert alert-success alert-dismissable fade in">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Success!</strong> @TempData["pwdchanged"] .
+        </div>
+
+        //empty the view bag
+        TempData["pwdchanged"] = null;
+    }
+    <div class="table-responsive">
+        <table id="ListTable" class="table table-responsive">
+            <thead>
+                <tr>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.UserName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirstName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.MiddleName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LastName)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+            {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UserName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MiddleName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LastName)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Detail", "Details", new { id = item.Id }) |
+                            @Html.ActionLink("Reset Password", "ResetPassword", new { UserID = item.Id })
+                        </td>
+                    </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+
+</div>
+<script src="~/Scripts/Custom/data-table.js"></script>

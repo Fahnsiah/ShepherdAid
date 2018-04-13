@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ShepherdAidDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AspNetRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="75" FixedLength="false" Unicode="true" />
+    <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="75" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="InstitationUsers" Relationship="Self.FK_InstitationUsers_AspNetUsers" FromRole="AspNetUsers" ToRole="InstitationUsers" />
+  </EntityType>
+  <EntityType Name="InstitationUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InstitationID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="StatusTypeID" Type="Int32" Nullable="false" />
+    <Property Name="RecordedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_InstitationUsers_AspNetUsers" FromRole="InstitationUsers" ToRole="AspNetUsers" />
+    <NavigationProperty Name="Institution" Relationship="Self.FK_InstitationUsers_Institutions" FromRole="InstitationUsers" ToRole="Institutions" />
+  </EntityType>
+  <EntityType Name="Institution">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InstitutionName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Initial" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OfficePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MobilePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Website" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StatusTypeID" Type="Int32" Nullable="false" />
+    <Property Name="RecordedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="InstitationUsers" Relationship="Self.FK_InstitationUsers_Institutions" FromRole="Institutions" ToRole="InstitationUsers" />
+    <NavigationProperty Name="StatusType" Relationship="Self.FK_Institutions_StatusTypes" FromRole="Institutions" ToRole="StatusTypes" />
+  </EntityType>
+  <EntityType Name="MemberType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RecordedBy" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="StatusType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TypeDescription" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="RecordedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Institutions" Relationship="Self.FK_Institutions_StatusTypes" FromRole="StatusTypes" ToRole="Institutions" />
+  </EntityType>
+  <EntityType Name="Tracker">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IpAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AreaAccessed" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ActionDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PreviousValues" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_InstitationUsers_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="InstitationUsers" Type="Self.InstitationUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InstitationUsers">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InstitationUsers_Institutions">
+    <End Role="Institutions" Type="Self.Institution" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="InstitationUsers" Type="Self.InstitationUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institutions">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="InstitationUsers">
+        <PropertyRef Name="InstitationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Institutions_StatusTypes">
+    <End Role="StatusTypes" Type="Self.StatusType" Multiplicity="1" />
+    <End Role="Institutions" Type="Self.Institution" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Institutions">
+        <PropertyRef Name="StatusTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ShepherdAidDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRole" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
+    <EntitySet Name="InstitationUsers" EntityType="Self.InstitationUser" />
+    <EntitySet Name="Institutions" EntityType="Self.Institution" />
+    <EntitySet Name="MemberTypes" EntityType="Self.MemberType" />
+    <EntitySet Name="StatusTypes" EntityType="Self.StatusType" />
+    <EntitySet Name="Trackers" EntityType="Self.Tracker" />
+    <AssociationSet Name="FK_InstitationUsers_AspNetUsers" Association="Self.FK_InstitationUsers_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="InstitationUsers" EntitySet="InstitationUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InstitationUsers_Institutions" Association="Self.FK_InstitationUsers_Institutions">
+      <End Role="Institutions" EntitySet="Institutions" />
+      <End Role="InstitationUsers" EntitySet="InstitationUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Institutions_StatusTypes" Association="Self.FK_Institutions_StatusTypes">
+      <End Role="StatusTypes" EntitySet="StatusTypes" />
+      <End Role="Institutions" EntitySet="Institutions" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

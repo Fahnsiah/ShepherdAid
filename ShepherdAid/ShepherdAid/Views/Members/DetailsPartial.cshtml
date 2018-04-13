@@ -1,0 +1,201 @@
+﻿@model ShepherdAid.Models.Member
+
+@{
+
+    //string memberName = string.Format("{0} {1} [{2}]", Model.SalutationType.TypeName, Model.LastName, Model.MemberID);
+
+    string imgUrl = ViewBag.MemberPhoto;
+
+    if (imgUrl == null)
+    {
+        imgUrl = ShepherdAid.Models.StaticVariables.MemberDefaultPhoto;
+    }
+
+
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <dl class="dl-horizontal">
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MemberType.TypeName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MemberType.TypeName)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MemberID)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MemberID)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SalutationType.TypeName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SalutationType.TypeName)
+            </dd>
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FirstName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MiddleName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MiddleName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.LastName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.LastName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.GenderType.TypeName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.GenderType.TypeName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DateOfBirth)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MaritalStatusType.TypeName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MaritalStatusType.TypeName)
+            </dd>
+
+        </dl>
+    </div>
+
+    <div class="col-md-4">
+        <dl class="dl-horizontal">
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ResidentAddress)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ResidentAddress)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EmailAddress)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EmailAddress)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MobilePhone)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MobilePhone)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.OfficePhone)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.OfficePhone)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.NationalityType.TypeName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NationalityType.TypeName)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.County.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.County.Name)
+            </dd>
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Region)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Region)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.StatusType.StatusName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.StatusType.StatusName)
+            </dd>
+
+        </dl>
+    </div>
+
+    <div class="col-md-2">
+        <img src="~/Content/@imgUrl" class="myphoto" />
+
+        @if (ViewBag.MemberPhoto == null)
+        {
+        <div>
+            @Html.ActionLink("Add Photo", "file", "PhotoUploads", new { id = Session["member_id"] }, null)
+        </div>
+        }
+        else
+        {
+        <div>
+            @Html.ActionLink("Change Photo", "file", "PhotoUploads", new { id = Session["member_id"] }, null)
+        </div>
+
+        }
+    </div>
+
+    <div class="col-md-1">
+        @Html.ActionLink(" Edit", "Edit", new { id = Session["id"] }, new { @class = "text-primary", @title = "Edit Record" }) <br />
+        @Html.ActionLink(" Delete", "Delete", new { id = Session["id"] }, new { @class = "text-primary", @title = "delete" })
+    </div>
+</div>
+
+<div class=" col-md-12">
+
+    <ul class="nav nav-tabs">
+        <li class=""><a href="~/MembersObligations/Index">Obligations</a></li>
+        <li><a href="~/OrganizationMembers/Index">Leadership</a></li>
+        <li><a href="#">history</a></li>
+    </ul>
+</div>
+
+
+@*@section Scripts{
+
+    <script src="~/Scripts/Custom/tabs.js"></script>
+}*@

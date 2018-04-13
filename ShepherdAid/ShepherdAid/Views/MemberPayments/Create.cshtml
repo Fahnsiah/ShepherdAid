@@ -1,0 +1,69 @@
+﻿@model ShepherdAid.Models.MemberPayment
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="mybreadcrumb">
+    @Html.ActionLink("Paments", "Index", "Payments") >>
+    @Html.ActionLink("Active Obligation", "ActiveObligations", "Payments") >>
+    Member Payment
+</div>
+
+<fieldset>
+    <legend>@ViewBag.Title</legend>
+
+    <div class="col-md-8">
+
+        @using (Html.BeginForm("Create","MemberPayments", FormMethod.Post ))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+                <div class="form-group">
+                    @Html.Label("Payment Amount", htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        <input type="text" id="AmountPaid" name="AmountPaid" required="required" class="form-control text-right">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Remark, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.TextAreaFor(model => model.Remark, 3, 100, null)
+                        @Html.ValidationMessageFor(model => model.Remark, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-3 col-md-9">
+                        <input type="submit" value="Create" class="btn btn-primary form-control" />
+                    </div>
+                </div>
+                <hr />
+                <div class="form-group">
+                    @Html.Label("Accumulated Amount", htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        <input type="text" required="required" value="@ViewBag.Accumulated" readonly="readonly" class="form-control text-right">
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Total Payment", htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        <input type="text" required="required" value="@ViewBag.TotalPayment" readonly="readonly" class="form-control  text-right">
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Current Balance", htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        <input type="text" required="required" value="@ViewBag.CurrentBalance" readonly="readonly" class="form-control text-right">
+                    </div>
+                </div>
+            </div>
+        }
+        </div>
+</fieldset>

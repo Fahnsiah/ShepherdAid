@@ -1,0 +1,67 @@
+﻿@model ShepherdAid.Models.MemberPayment
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MemberPayment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Remark)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Remark)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RecordedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecordedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateRecorded)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateRecorded)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.MemberID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Member.MemberID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MembersObligation.RecordedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MembersObligation.RecordedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment.RecordedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Payment.RecordedBy)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

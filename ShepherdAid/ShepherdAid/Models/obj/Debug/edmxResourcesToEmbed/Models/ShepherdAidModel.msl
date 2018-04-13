@@ -1,0 +1,590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ShepherdAidDBModelStoreContainer" CdmEntityContainer="ShepherdAidDBEntities">
+    <FunctionImportMapping FunctionImportName="FuncApplicationUsers" FunctionName="ShepherdAidDBModel.Store.ApplicationUsers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ShepherdAidDBModel.FuncApplicationUsers_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="InstitutionGroup" ColumnName="InstitutionGroup" />
+          <ScalarProperty Name="InstitutionName" ColumnName="InstitutionName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="FuncAddGroupRoles" FunctionName="ShepherdAidDBModel.Store.AddGroupRoles" />
+    <FunctionImportMapping FunctionImportName="RevokeGroupRevokedRoleFromUser" FunctionName="ShepherdAidDBModel.Store.RevokeGroupRevokedRoleFromUser" />
+    <FunctionImportMapping FunctionImportName="FuncRevokeGroupRevokedRoleFromUser" FunctionName="ShepherdAidDBModel.Store.RevokeGroupRevokedRoleFromUser" />
+    <FunctionImportMapping FunctionImportName="AddCreatedUserRoles" FunctionName="ShepherdAidDBModel.Store.AddCreatedUserRoles" />
+    <FunctionImportMapping FunctionImportName="FuncAddCreatedUserRoles" FunctionName="ShepherdAidDBModel.Store.AddCreatedUserRoles" />
+    <FunctionImportMapping FunctionImportName="DeleteAddedGroupRole" FunctionName="ShepherdAidDBModel.Store.DeleteAddedGroupRole" />
+    <FunctionImportMapping FunctionImportName="FuncDeleteAddedGroupRole" FunctionName="ShepherdAidDBModel.Store.DeleteAddedGroupRole" />
+    <FunctionImportMapping FunctionImportName="GroupAssignedRoles" FunctionName="ShepherdAidDBModel.Store.GroupAssignedRoles" />
+    <FunctionImportMapping FunctionImportName="GroupAvailableRoles" FunctionName="ShepherdAidDBModel.Store.GroupAvailableRoles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ShepherdAidDBModel.GroupAvailableRoles_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UserAssignedRoles" FunctionName="ShepherdAidDBModel.Store.UserAssignedRoles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ShepherdAidDBModel.UserAssignedRoles_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UserAvailableRoles" FunctionName="ShepherdAidDBModel.Store.UserAvailableRoles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ShepherdAidDBModel.UserAvailableRoles_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="FuncGroupAvailableRoles" FunctionName="ShepherdAidDBModel.Store.GroupAvailableRoles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ShepherdAidDBModel.FuncGroupAvailableRoles_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="FuncUserAssignedRoles" FunctionName="ShepherdAidDBModel.Store.UserAssignedRoles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ShepherdAidDBModel.FuncUserAssignedRoles_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="FuncUserAvailableRoles" FunctionName="ShepherdAidDBModel.Store.UserAvailableRoles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ShepherdAidDBModel.FuncUserAvailableRoles_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AssignGroupAssignedRoleToUser" FunctionName="ShepherdAidDBModel.Store.AssignGroupAssignedRoleToUser" />
+    <FunctionImportMapping FunctionImportName="FuncAssignGroupAssignedRoleToUser" FunctionName="ShepherdAidDBModel.Store.AssignGroupAssignedRoleToUser" />
+    <FunctionImportMapping FunctionImportName="AssignRoleToUser" FunctionName="ShepherdAidDBModel.Store.AssignRoleToUser" />
+    <FunctionImportMapping FunctionImportName="FuncAssignRoleToUser" FunctionName="ShepherdAidDBModel.Store.AssignRoleToUser" />
+    <FunctionImportMapping FunctionImportName="DeleteAddedUserRole" FunctionName="ShepherdAidDBModel.Store.DeleteAddedUserRole" />
+    <FunctionImportMapping FunctionImportName="FuncDeleteAddedUserRole" FunctionName="ShepherdAidDBModel.Store.DeleteAddedUserRole" />
+    <FunctionImportMapping FunctionImportName="RevokeGroupRole" FunctionName="ShepherdAidDBModel.Store.RevokeGroupRole" />
+    <FunctionImportMapping FunctionImportName="RevokeUserRole" FunctionName="ShepherdAidDBModel.Store.RevokeUserRole" />
+    <FunctionImportMapping FunctionImportName="FuncRevokeGroupRole" FunctionName="ShepherdAidDBModel.Store.RevokeGroupRole" />
+    <FunctionImportMapping FunctionImportName="FuncRevokeUserRole" FunctionName="ShepherdAidDBModel.Store.RevokeUserRole" />
+    <FunctionImportMapping FunctionImportName="ReportUserAssignedRoles" FunctionName="ShepherdAidDBModel.Store.ReportUserAssignedRoles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ShepherdAidDBModel.ReportUserAssignedRoles_Result">
+          <ScalarProperty Name="Full_Name" ColumnName="Full Name" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="FuncReportUserAssignedRoles" FunctionName="ShepherdAidDBModel.Store.ReportUserAssignedRoles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ShepherdAidDBModel.FuncReportUserAssignedRoles_Result">
+          <ScalarProperty Name="Full_Name" ColumnName="Full Name" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ReportGroupAssignedRoles" FunctionName="ShepherdAidDBModel.Store.ReportGroupAssignedRoles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ShepherdAidDBModel.ReportGroupAssignedRoles_Result">
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ReportUsersAndGroups" FunctionName="ShepherdAidDBModel.Store.ReportUsersAndGroups">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ShepherdAidDBModel.ReportUsersAndGroups_Result">
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="FuncUsersAndGroups" FunctionName="ShepherdAidDBModel.Store.ReportUsersAndGroups">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ShepherdAidDBModel.FuncUsersAndGroups_Result">
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="FuncReportGroupAssignedRoles" FunctionName="ShepherdAidDBModel.Store.ReportGroupAssignedRoles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ShepherdAidDBModel.FuncReportGroupAssignedRoles_Result">
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="FuncGroupAssignedRoles" FunctionName="ShepherdAidDBModel.Store.GroupAssignedRoles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ShepherdAidDBModel.FuncGroupAssignedRoles_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetDefaultInstitutionGroupCount" FunctionName="ShepherdAidDBModel.Store.GetDefaultInstitutionGroupCount" />
+    <EntitySetMapping Name="AspNetGroups">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.AspNetGroup">
+        <MappingFragment StoreEntitySet="AspNetGroups">
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="InstitutionID" ColumnName="InstitutionID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.AspNetUser">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="UserGroupID" ColumnName="UserGroupID" />
+          <ScalarProperty Name="LoginHint" ColumnName="LoginHint" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.Client">
+        <MappingFragment StoreEntitySet="Clients">
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="OfficePhone" ColumnName="OfficePhone" />
+          <ScalarProperty Name="Initial" ColumnName="Initial" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Companies">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.Company">
+        <MappingFragment StoreEntitySet="Companies">
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="OfficePhone" ColumnName="OfficePhone" />
+          <ScalarProperty Name="Initial" ColumnName="Initial" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Counties">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.County">
+        <MappingFragment StoreEntitySet="Counties">
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GenderTypes">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.GenderType">
+        <MappingFragment StoreEntitySet="GenderTypes">
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InstitutionGroups">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.InstitutionGroup">
+        <MappingFragment StoreEntitySet="InstitutionGroups">
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="OfficePhone" ColumnName="OfficePhone" />
+          <ScalarProperty Name="Initial" ColumnName="Initial" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Institutions">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.Institution">
+        <MappingFragment StoreEntitySet="Institutions">
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="StatusTypeID" ColumnName="StatusTypeID" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="OfficePhone" ColumnName="OfficePhone" />
+          <ScalarProperty Name="Initial" ColumnName="Initial" />
+          <ScalarProperty Name="InstitutionName" ColumnName="InstitutionName" />
+          <ScalarProperty Name="InstitutionGroupID" ColumnName="InstitutionGroupID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaritalStatusTypes">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.MaritalStatusType">
+        <MappingFragment StoreEntitySet="MaritalStatusTypes">
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Members">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.Member">
+        <MappingFragment StoreEntitySet="Members">
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="PhotoPath" ColumnName="PhotoPath" />
+          <ScalarProperty Name="StatusTypeID" ColumnName="StatusTypeID" />
+          <ScalarProperty Name="MemberTypeID" ColumnName="MemberTypeID" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="CountyID" ColumnName="CountyID" />
+          <ScalarProperty Name="NationalityTypeID" ColumnName="NationalityTypeID" />
+          <ScalarProperty Name="OfficePhone" ColumnName="OfficePhone" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="ResidentAddress" ColumnName="ResidentAddress" />
+          <ScalarProperty Name="MaritalStatusTypeID" ColumnName="MaritalStatusTypeID" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="GenderTypeID" ColumnName="GenderTypeID" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="SalutationTypeID" ColumnName="SalutationTypeID" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="InstitutionID" ColumnName="InstitutionID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MemberTypes">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.MemberType">
+        <MappingFragment StoreEntitySet="MemberTypes">
+          <ScalarProperty Name="InstitutionID" ColumnName="InstitutionID" />
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NationalityTypes">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.NationalityType">
+        <MappingFragment StoreEntitySet="NationalityTypes">
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrganizationGenderTypes">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.OrganizationGenderType">
+        <MappingFragment StoreEntitySet="OrganizationGenderTypes">
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrganizationLeaders">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.OrganizationLeader">
+        <MappingFragment StoreEntitySet="OrganizationLeaders">
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="PositionTypeID" ColumnName="PositionTypeID" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrganizationMembers">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.OrganizationMember">
+        <MappingFragment StoreEntitySet="OrganizationMembers">
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="MembershipDate" ColumnName="MembershipDate" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrganizationStatusTypes">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.OrganizationStatusType">
+        <MappingFragment StoreEntitySet="OrganizationStatusTypes">
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PositionTypes">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.PositionType">
+        <MappingFragment StoreEntitySet="PositionTypes">
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="OrgranizationID" ColumnName="OrgranizationID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalutationTypes">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.SalutationType">
+        <MappingFragment StoreEntitySet="SalutationTypes">
+          <ScalarProperty Name="InstitutionID" ColumnName="InstitutionID" />
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatusTypes">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.StatusType">
+        <MappingFragment StoreEntitySet="StatusTypes">
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemVariables">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.SystemVariable">
+        <MappingFragment StoreEntitySet="SystemVariables">
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trackers">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.Tracker">
+        <MappingFragment StoreEntitySet="Trackers">
+          <ScalarProperty Name="PreviousValues" ColumnName="PreviousValues" />
+          <ScalarProperty Name="ActionDate" ColumnName="ActionDate" />
+          <ScalarProperty Name="AreaAccessed" ColumnName="AreaAccessed" />
+          <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MembersObligations">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.MembersObligation">
+        <MappingFragment StoreEntitySet="MembersObligations">
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="ObligationID" ColumnName="ObligationID" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Obligations">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.Obligation">
+        <MappingFragment StoreEntitySet="Obligations">
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="ObligationStatusTypeID" ColumnName="ObligationStatusTypeID" />
+          <ScalarProperty Name="RecurranceTypeID" ColumnName="RecurranceTypeID" />
+          <ScalarProperty Name="AdjustedBalance" ColumnName="AdjustedBalance" />
+          <ScalarProperty Name="DateAdjusted" ColumnName="DateAdjusted" />
+          <ScalarProperty Name="DateStarted" ColumnName="DateStarted" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="CurrencyTypeID" ColumnName="CurrencyTypeID" />
+          <ScalarProperty Name="ObligationTypeID" ColumnName="ObligationTypeID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ObligationStatusTypes">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.ObligationStatusType">
+        <MappingFragment StoreEntitySet="ObligationStatusTypes">
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ObligationTypes">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.ObligationType">
+        <MappingFragment StoreEntitySet="ObligationTypes">
+          <ScalarProperty Name="InstitutionID" ColumnName="InstitutionID" />
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="ObligationName" ColumnName="ObligationName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RecurranceTypes">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.RecurranceType">
+        <MappingFragment StoreEntitySet="RecurranceTypes">
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="Recurrance" ColumnName="Recurrance" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CurrencyTypes">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.CurrencyType">
+        <MappingFragment StoreEntitySet="CurrencyTypes">
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocumentTypes">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.DocumentType">
+        <MappingFragment StoreEntitySet="DocumentTypes">
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MemberDocuments">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.MemberDocument">
+        <MappingFragment StoreEntitySet="MemberDocuments">
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="DocumentPath" ColumnName="DocumentPath" />
+          <ScalarProperty Name="DocumentTypeID" ColumnName="DocumentTypeID" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.AspNetRole">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="FuncGetDefaultInstitutionGroupCount" FunctionName="ShepherdAidDBModel.Store.GetDefaultInstitutionGroupCount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ShepherdAidDBModel.FuncGetDefaultInstitutionGroupCount_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="MemberPhotos">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.MemberPhoto">
+        <MappingFragment StoreEntitySet="MemberPhotos">
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="DocumentPath" ColumnName="DocumentPath" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Organizations">
+      <EntityTypeMapping TypeName="ShepherdAidDBModel.Organization">
+        <MappingFragment StoreEntitySet="Organizations">
+          <ScalarProperty Name="DateRecorded" ColumnName="DateRecorded" />
+          <ScalarProperty Name="RecordedBy" ColumnName="RecordedBy" />
+          <ScalarProperty Name="OrganizationStatusTypeID" ColumnName="OrganizationStatusTypeID" />
+          <ScalarProperty Name="OrganizationGenderTypeID" ColumnName="OrganizationGenderTypeID" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="OfficePhone" ColumnName="OfficePhone" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="DateEstablished" ColumnName="DateEstablished" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="InstitutionID" ColumnName="InstitutionID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="OrganizationNonMembers1" FunctionName="ShepherdAidDBModel.Store.OrganizationNonMembers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ShepherdAidDBModel.OrganizationNonMembers1_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="FuncOrganizationNonMembers" FunctionName="ShepherdAidDBModel.Store.OrganizationNonMembers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ShepherdAidDBModel.FuncOrganizationNonMembers_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

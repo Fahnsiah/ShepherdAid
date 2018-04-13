@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Denied";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    string previouPage = Request.UrlReferrer.AbsoluteUri;
+}
+
+<div class="mycontainer">
+
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <br />
+            <h3><strong>Access Denied!</strong></h3>
+
+            <br />
+            <h3>You are not authorized to access the requested page.</h3>
+
+            <br />
+            <div>
+                <a href="@previouPage">Back to Previous page</a> | @Html.ActionLink("Back to Home", "Index", "Home")                
+            </div>
+            <br />
+
+        </div>
+    </div>
+    
+</div>
+
+

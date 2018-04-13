@@ -1,0 +1,9 @@
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\ShepherdAid.dll.config
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\ShepherdAid.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\bin\ShepherdAid.pdb
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\obj\Debug\ShepherdAid.dll
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\obj\Debug\ShepherdAid.pdb
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\obj\Debug\ShepherdAid.dll.licenses
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\obj\Debug\ShepherdAid.XtraReports.ReportsDesigns.xrptMembersList.resources
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\obj\Debug\ShepherdAid.csproj.GenerateResource.Cache
+W:\CLIENTS\CHURCH\2017\ShepherdAid\ShepherdAid\obj\Debug\ShepherdAid.csprojResolveAssemblyReference.cache

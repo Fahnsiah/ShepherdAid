@@ -1,0 +1,333 @@
+﻿/*#region HTML Tags*/
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #ffffff;
+    color: #4f8397;
+}
+
+h4 {
+    height: 25px;
+    padding: 3px;
+    background-color: transparent;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    font-variant-caps: small-caps;
+    border-bottom: 5px ridge #99c1db;
+}
+
+h3 {
+    color: #cc1010;
+}
+h5{
+    font-variant-caps:all-small-caps;
+    color:#0f1238;
+
+}
+
+ul{
+    list-style-type:none;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px !important;
+}
+ul.pull-down {
+    padding-top: 20px !important;
+}
+
+li {
+    line-height: 1em !important;
+    margin: 0px 0px 0px 0px !important;
+    padding: 0px 0px 0px 0px !important;
+}
+
+li a {
+    line-height: 1em !important;
+    /*margin:0px 0px 0px 0px !important;*/
+    padding: 10px 10px 0px 0px !important;
+}
+
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+input.search-field {
+    max-width: 100% !important;
+}
+/*#endregion HTML Tags*/
+
+/*#region Banner*/
+button.linkbutton{
+    width:125px;
+   align-content:flex-start;
+}
+fieldset{
+    margin-top:1px;
+    border: 1px solid #99c1db;
+	background-color:#f0f0f0;
+    padding: 0px 0px 0px 0px;
+	border-radius: 4px; 
+    -moz-border-radius: 4px; 
+    -webkit-border-radius: 4px;
+	
+}
+
+legend {
+    border: 1px solid #99c1db;
+	color:#ffffff;
+	font-size: 120%;
+    height:30px;
+    font-weight:bold;
+    font-variant-caps:all-petite-caps;
+	text-align: left;
+	background-color: #4f8397;
+	padding: 2px 2px 2px 2px;
+	border-radius: 4px; 
+    -moz-border-radius: 4px; 
+    -webkit-border-radius: 4px;
+	
+}
+th.th-action{
+    width:90px;
+}
+.banner {
+    /*height:45px !important;*/
+    background-color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.banner a {
+    color: #0f1238 !important;
+}
+
+.banner a:hover {
+    color: #808080 !important;
+}
+
+.required:after 
+{
+	content: "*";
+	font-weight: bold;
+	color: red; 
+}
+
+/*#endregion Banner*/
+.search-form-control {
+  display: block;
+  width: 25%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555555;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+          transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+/*#region Collapsible*/
+.collapsed-bgrd-color {
+    background-color: #000000 !important;
+}
+
+.collapsed-menu-bgrd-color {
+    background-color: #000000 !important;
+}
+
+.collapse-background {
+    background-color: #e1f6f6 !important;
+}
+/*#endregion Collapsible*/
+
+/*#region Content*/
+.mycontainer {
+    margin-top: 0px;
+    border-top: 0px solid #f0f0f0;
+    border-left: 0px groove #f0f0f0;
+    border-right: 0px groove #f0f0f0;
+    border-bottom: 0px solid #f0f0f0;
+    background-color: #ffffff;
+    min-height: 350px;
+    /*background-color:#0f1238;*/
+}
+
+.myinputarea {
+    /*background-color:#ffffff;*/
+    background-color: transparent;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: transparent;
+}
+/*#endregion Content*/
+
+/*#region Search*/
+.search-area {
+    background-color: #99c1db;
+    color: #ffffff;
+}
+
+.mybreadcrumb {
+    background-color: #ffffff;
+    color: #131563;
+    border-bottom: 1px dashed #e0e0e0;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.new-record {
+    padding-top: 10px;
+    background-color: #ffffff;
+    color: #131563;
+}
+/*#endregion Search*/
+
+.btn-size{
+    width:100px !important;
+}
+a.appimage {
+    background: url(../Images/favicon.png) no-repeat top left;
+    display: block;
+    width: 150px;
+    height: 150px;
+    text-indent: -9999px; /* hides the link text */
+}
+
+.app-name {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.main-menu {
+    background-color: #0f1238;
+    min-height: 30px;
+    margin-bottom: 5px;
+    height: 30px;
+    width: 100%;
+    color: #ffffff !important;
+}
+
+.main-menu a {
+    color: #ff6a00 !important;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.main-menu a:hover {
+    color: #ffffff !important;
+    background-color: transparent !important;
+    font-size: 17px;
+    font-weight: normal;
+    /*font-weight:bold;*/
+}
+
+.main-menu-nav {
+    height: 30px;
+    margin-top: -12px;
+}
+
+.top-margin-60 {
+    margin-top: 60px;
+}
+
+.myphoto {
+    height: 150px;
+    width: 150px;
+    border: 1px solid #000000;
+}
+
+.copyright-mystyle {
+    width: 100%;
+    border-top: 1px solid #f0f0f0;
+}
+
+.leftPane {
+    padding-left: 0px !important;
+}
+
+.no-background {
+    background-color: transparent !important;
+}
+
+.nowrap {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.no-record{
+    font-size:20px;
+    font-weight:bold;
+    color:#96581d;
+}
+.partial-background{
+    margin-left:20px;
+    background-color:#ffffff;
+}
+.active-tab{
+    
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+          transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.related-tasks{
+    border-left:1px solid #cccccc;
+    background-color:transparent;
+}
+
+.related-tasks-header{
+    font-variant-caps:all-small-caps;
+    font-weight:bold;
+    font-size:125%;
+}
+
+.report{
+   
+    border: 1px solid #cccccc;
+    background-color:transparent;
+}
+
+.report .heading{
+    background-color:#4f8397;
+    font-weight:bold;
+    color:#ffffff;
+    height:30px; 
+    padding-top:5px;
+    padding-left:5px;
+}
+.report li{
+    line-height: 1em !important;
+    margin: 10px 0px 10px 10px !important;
+    padding: 0px 0px 0px 0px !important;
+}
+
+.report li a {
+    line-height: 1em !important;
+    /*margin:0px 0px 0px 0px !important;*/
+    padding: 10px 10px 0px 0px !important;
+}
+.pull-report-left{
+    margin-left:0px;
+    padding:0px 0px 0px 0px;
+    background-color:#e0e0e0;
+}

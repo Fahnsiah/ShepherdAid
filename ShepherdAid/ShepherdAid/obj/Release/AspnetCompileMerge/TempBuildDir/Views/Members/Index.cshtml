@@ -1,0 +1,90 @@
+﻿@model IEnumerable<ShepherdAid.Models.Member>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<fieldset>
+    <legend>MEMBER LIST</legend>
+
+    <div class="row">
+
+        <div class="col-md-9">
+
+            <div class="search-area">
+                <div class="col-md-11 col-xs-11">
+                    @using (Html.BeginForm())
+                        {
+                        <div class="input-group">
+                            <input type="text" class="form-control search-field" placeholder="Search" id="search" name="search" />
+                            <div class="input-group-btn">
+                                <button class="btn btn-primary" type="submit">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+
+                            </div>
+                        </div>
+                        @*</form>*@
+                        }
+                </div>
+
+                <div class="col-md-1 col-xs-1 new-record">
+                    <a href="../Members/Create" title="Create New"><span class="glyphicon glyphicon-plus"></span></a>
+                </div>
+            </div>
+
+            @if (Model != null && Model.Count() > 0)
+            {
+                <table id="ListTable" class="table table-bordered table-striped">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.MemberID)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.FirstName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.MiddleName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LastName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.GenderType.TypeName)
+                        </th>
+                        <th></th>
+                    </tr>
+                    @foreach (var item in Model)
+                        {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MemberID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MiddleName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LastName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.GenderType.TypeName)
+                        </td>
+                        <td>
+                            @Html.ActionLink(" ", "Details", new { id = item.ID }, new { @class = "glyphicon glyphicon-circle-arrow-right", @title = "view detail" })
+                        </td>
+                    </tr>
+                        }
+                </table>
+            }
+            else
+            {
+                <span class="no-record">THERE IS NO MEMBER CREATED IN THIS SYSTEM YET.</span>
+            }
+        </div>
+
+    </div>
+</fieldset>

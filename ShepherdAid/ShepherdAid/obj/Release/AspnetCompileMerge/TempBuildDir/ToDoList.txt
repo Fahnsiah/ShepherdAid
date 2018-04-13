@@ -1,0 +1,18 @@
+﻿//Fix error after creating user
+//Dropdown for Role, Institution passed zero to class
+//Reset User password
+//Filter the list of user for Manage role just to show based on scope
+//Create user method to accept the member model as a overloaded function
+//Change all inline sql to sp
+Fix all the redirect to error page
+force users to change default password
+add user preference table for number to display, color etc
+complete the member registration (CRUD)
+change the following roles
+	system admin to client admin
+	group admin to institution group admin
+	admin to Institution admin
+so that the admins are: Super Admin, Client Admin, Institution Group Admin, Institution Admin
+
+display only active members
+remmove administered sacrament from the list if it can be administered only once.

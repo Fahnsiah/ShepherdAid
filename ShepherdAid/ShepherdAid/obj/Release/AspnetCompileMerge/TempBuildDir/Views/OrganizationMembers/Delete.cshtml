@@ -1,0 +1,87 @@
+﻿@model ShepherdAid.Models.OrganizationMember
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="mybreadcrumb">
+    @Html.ActionLink("Organizations List", "Index", "Organizations") >>
+    @Html.ActionLink("Organization Detail", "Details", "Organizations", new { id = Session["id"] }, null) >>
+    Member Delete
+</div>
+
+<div class="row">
+    <fieldset>
+        <legend>REMOVE @Model.Member.FirstName FROM @Model.Organization.Name</legend>
+
+        <h3>Are you sure you want to delete this?</h3>
+        <div>
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Member.FirstName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Member.FirstName)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Member.MiddleName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Member.MiddleName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Member.LastName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Member.LastName)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Member.GenderType.TypeName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Member.GenderType.TypeName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Organization.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Organization.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.MembershipDate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MembershipDate)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.StatusType.StatusName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.StatusType.StatusName)
+                </dd>
+
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="Delete" class="btn btn-danger form-control" /> 
+                </div>
+            }
+        </div>
+    </fieldset>
+</div>

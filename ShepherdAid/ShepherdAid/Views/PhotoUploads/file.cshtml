@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Upload Photo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <fieldset>
+        <legend>UPLOAD PHOTO FOR @ViewBag.Name</legend>
+
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                @using (Html.BeginForm("file", "PhotoUploads", FormMethod.Post,
+                         new { enctype = "multipart/form-data" }))
+                {
+                    <input type="file" name="file" id="file" /><br><br>
+                    <input type="submit" value="Upload File" />
+                    <br><br>
+                    @ViewBag.Message
+                }
+            </div>
+        </div>
+    </fieldset>
+</div>

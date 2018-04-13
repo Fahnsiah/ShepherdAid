@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "System Setup";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row mycontainer">
+    <div class="col-md-2">
+        @Html.Partial("ObligationPartialView")
+    </div>
+    <div class="col-md-10">
+        @section scripts{
+            @RenderSection("scripts", required: false)
+        }
+        @RenderBody()
+    </div>
+</div>

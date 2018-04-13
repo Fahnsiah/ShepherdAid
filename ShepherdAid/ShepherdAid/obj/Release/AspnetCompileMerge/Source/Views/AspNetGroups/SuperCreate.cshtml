@@ -1,0 +1,112 @@
+﻿@model ShepherdAid.Models.AspNetGroup
+
+@{
+    ViewBag.Title = "SuperCreate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Create", "ASpNetGroups"))
+{
+    @Html.AntiForgeryToken()
+
+    
+    <div class="form-horizontal">
+        <div class="mybreadcrumb">
+            @Html.ActionLink("User Group List", "Index", "AspNetGroups") >>
+            Create User Group
+        </div>
+
+        @if (ViewBag.Error != null)
+        {
+        <div id="divError" class="alert alert-danger alert-dismissable">
+            <span class="close" data-dismiss="alert" aria-label="close">&times;</span>
+            <strong>Fail!</strong> @ViewBag.Error
+        </div>
+
+        }
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Institution.InstitutionGroup.ClientID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ClientID", null, "--select--", htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Institution.InstitutionGroup.ClientID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Institution.InstitutionGroupID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("InstitutionGroupID", null, "--select--", htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Institution.InstitutionGroupID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.InstitutionID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("InstitutionID", null, "--select--", htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.InstitutionID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.IsActive, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.IsActive)
+                    @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-primary form-control" />
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            //alert("gerate");
+            function populateInstitutionGroup() {
+                //alert("populate scales?");
+                $("#InstitutionGroupID").empty();
+                $("#InstitutionGroupID").append("<option value='0'>--select--</option>");
+                $.get("/AspNetGroups/GetInstitutionGroups", { id: $("#ClientID").val() }, function (data) {
+                    $.each(data, function (index, row) {
+                        $("#InstitutionGroupID").append("<option value='" + row.ID + "'>" + row.Name + "</option>")
+                    });
+                });
+            }
+
+            function populateInstitution() {
+                //alert("populate scales?");
+                $("#InstitutionID").empty();
+                $("#InstitutionID").append("<option value='0'>--select--</option>");
+                $.get("/AspNetGroups/GetInstitutions", { id: $("#InstitutionGroupID").val() }, function (data) {
+                    $.each(data, function (index, row) {
+                        $("#InstitutionID").append("<option value='" + row.ID + "'>" + row.InstitutionName + "</option>")
+                    });
+                });
+            }
+
+            $(document).ready(function () {
+                $("#ClientID").on("change", populateInstitutionGroup);
+            });
+
+            $(document).ready(function () {
+                $("#InstitutionGroupID").on("change", populateInstitution);
+            });
+        })
+    </script>
+}

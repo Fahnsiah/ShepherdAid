@@ -1,0 +1,29 @@
+
+        @*<div class="collapse navbar-collapse collapsed-menu-bgrd-color collapse-background" id="myNavbar">
+
+            <div class="dropdown">
+                <span class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                    Members
+                    <span class="caret"></span>
+                </span>
+                <ul class="dropdown-menu">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                </ul>
+
+            </div>
+            <div class="dropdown">
+                <label class="dropdown-toggle" data-toggle="dropdown">
+                    Setup
+                    <span class="caret"></span>
+                </label>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Manage System Group</a></li>
+                    <li><a href="#">Manage Users</a></li>
+                    <li><a href="#">Manage Users Roles</a></li>
+                    <li><a href="#">Manage System Lists</a></li>
+                </ul>
+            </div>
+           
+        </div>*@

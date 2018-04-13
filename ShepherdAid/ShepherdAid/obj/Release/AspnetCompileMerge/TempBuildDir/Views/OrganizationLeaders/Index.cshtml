@@ -1,0 +1,82 @@
+﻿@model IEnumerable<ShepherdAid.Models.OrganizationLeader>
+
+<div class="row">
+    <div class="col-md-10 partial-background">
+
+        <p class="text-right">
+            <a href="~/OrganizationLeaders/Members" title="Create New"><span class="glyphicon glyphicon-plus"></span></a>
+        </p>
+        @if (Model != null && Model.Count() > 0)
+        {
+
+            <table class="table table-responsive table-striped table-bordered">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Member.MemberID)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Member.FirstName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Member.MiddleName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Member.LastName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.StartDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.EndDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.OrganizationPositionType.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.StatusType.StatusName)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Member.MemberID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Member.FirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Member.MiddleName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Member.LastName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.StartDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EndDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OrganizationPositionType.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.StatusType.StatusName)
+                        </td>
+                        <td class="nowrap">
+                            @Html.ActionLink(" ", "Edit", new { id = item.ID }, new { @class = "glyphicon glyphicon-edit", @title = "Edit" })||
+                            @Html.ActionLink(" ", "Delete", new { id = item.ID }, new { @class = "glyphicon glyphicon-trash", @title = "Delete" })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        }
+        else
+        {
+            <span class="no-record">NO LEADER EXISTS FOR THIS ORGANIZATION</span>
+        }
+    </div>
+</div>

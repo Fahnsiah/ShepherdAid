@@ -1,0 +1,80 @@
+﻿@model ShepherdAid.Models.InstitutionGroup
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="mybreadcrumb">
+    @Html.ActionLink("Clients List", "Clients", "InstitutionGroups") >>
+    @Html.ActionLink(Model.Client.Name, "Index", "InstitutionGroups", new { id = Session["id"] }, null) >>
+    Detail of Client Groups
+</div>
+
+<fieldset>
+    <legend>Detail of @Model.Name</legend>
+    <div class="col-md-8">
+
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Initial)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Initial)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.OfficePhone)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.OfficePhone)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MobilePhone)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MobilePhone)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EmailAddress)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EmailAddress)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Address)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Website)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Website)
+            </dd>
+        </dl>
+       
+         <p class="text-left">
+            @Html.ActionLink("Edit", "Edit", new { id = Model.ID })
+        </p>
+    </div>   
+
+</fieldset>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="602d60eefa9e49e69ad7c49d53ecbb36" Name="Diagram1" ZoomLevel="77">
+        <EntityTypeShape EntityType="ShepherdAidDBModel.AspNetGroupRole" Width="1.5" PointX="7.5" PointY="16.625" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.AspNetGroup" Width="1.5" PointX="5.25" PointY="16.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.AspNetUserRole" Width="1.5" PointX="9.75" PointY="15.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.AspNetUser" Width="1.5" PointX="7.5" PointY="15.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.Client" Width="1.5" PointX="1.5" PointY="6.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.Company" Width="1.5" PointX="1.5" PointY="4.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.County" Width="1.5" PointX="5.25" PointY="2" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.CurrencyType" Width="1.5" PointX="10.5" PointY="12.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.DocumentType" Width="1.5" PointX="7.5" PointY="5.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.GenderType" Width="1.5" PointX="5.25" PointY="8.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.InstitutionGroup" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.Institution" Width="1.5" PointX="3" PointY="10.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.MaritalStatusType" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.MemberDocument" Width="1.5" PointX="9.75" PointY="5.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.MemberObligation" Width="1.5" PointX="12.75" PointY="11.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.MemberPayment" Width="1.5" PointX="15" PointY="9.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.MemberPhoto" Width="1.5" PointX="9.75" PointY="14.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.Member" Width="1.5" PointX="7.5" PointY="8.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.MemberSacrament" Width="1.5" PointX="9.75" PointY="7.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.MemberType" Width="1.5" PointX="5.25" PointY="13.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.NationalityType" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.ObligationStatusType" Width="1.5" PointX="10.5" PointY="17.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.ObligationType" Width="1.5" PointX="5.25" PointY="14.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.OrganizationGenderType" Width="1.5" PointX="6" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.OrganizationLeader" Width="1.5" PointX="10.5" PointY="11.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.OrganizationMember" Width="1.5" PointX="10.5" PointY="9.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.OrganizationPositionType" Width="1.5" PointX="5.25" PointY="10.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.Organization" Width="1.5" PointX="8.25" PointY="10.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.OrganizationStatusType" Width="1.5" PointX="6" PointY="17.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.Payment" Width="1.5" PointX="12.75" PointY="9.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.PositionType" Width="1.5" PointX="5.25" PointY="12" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.RecurranceType" Width="1.5" PointX="10.5" PointY="3.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.SacramentRequirement" Width="1.5" PointX="9.75" PointY="1.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.SalutationType" Width="1.5" PointX="5.25" PointY="7.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.StatusType" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.SystemVariable" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.Tracker" Width="1.5" PointX="11.75" PointY="1.375" IsExpanded="false" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_AspNetGroupRoles_AspNetGroups" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_AspNetGroups_Institutions" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_AspNetUsers_AspNetGroups" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_Clients_Companies" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_InstitutionGroups_Clients" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_Members_Counties" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_MemberObligations_CurrencyTypes" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_Payments_CurrencyTypes" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_MemberDocuments_DocumentTypes" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_Members_GenderTypes" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_Institutions_InstitutionGroups" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_Institutions_StatusTypes" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_Members_Institutions" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_MemberSacraments_Institutions" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_MemberTypes_Institutions" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_ObligationTypes_Institutions" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_OrganizationPositionTypes_Institutions" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_Organizations_Institutions" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_PositionTypes_Institutions" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_SalutationTypes_Institutions" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_Members_MaritalStatusTypes" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_MemberDocuments_Members" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_MemberObligations_Members" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_MemberObligations_ObligationStatusTypes" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_MemberObligations_ObligationTypes" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_MemberObligations_RecurranceTypes" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_MemberPayments_MembersObligations" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_MemberPayments_Members" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_MemberPayments_Payments" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_MemberPhotos_Members" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_Members_MemberTypes" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_Members_NationalityTypes" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_Members_SalutationTypes" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_Members_StatusTypes" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_MemberSacraments_Members" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_OrganizationLeaders_Members" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_OrganizationMembers_Members" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_Organizations_OrganizationGenderTypes" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_OrganizationLeaders_Organizations" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_OrganizationLeaders_PositionTypes" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_OrganizationLeaders_StatusTypes" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_OrganizationMembers_Organizations" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_OrganizationMembers_StatusTypes" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_OrganizationPositionTypes_Organizations" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_Organizations_OrganizationStatusTypes" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.AspNetRole" Width="1.5" PointX="0.75" PointY="11.875" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_AspNetGroupRoles_AspNetRoles" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" />
+        <EntityTypeShape EntityType="ShepherdAidDBModel.Sacrament" Width="1.5" PointX="3.5" PointY="0.75" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_MemberSacraments_Sacraments" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_SacramentRequirements_Sacraments" />
+        <AssociationConnector Association="ShepherdAidDBModel.FK_SacramentRequirements_Sacraments1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

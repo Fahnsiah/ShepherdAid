@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "System Setup";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<fieldset>
+
+    <div class="col-md-3 col-sm-12 pull-report-left">
+        @Html.Partial("ReportPartial")
+    </div>
+
+    <div class="col-md-9 col-sm-12 ">
+
+        @section scripts{
+            @RenderSection("scripts", required: false)
+        }
+        @RenderBody()
+    </div>
+</fieldset>
+
+<script src="~/Scripts/Custom/reports.js"></script>

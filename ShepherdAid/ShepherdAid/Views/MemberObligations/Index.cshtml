@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ShepherdAid.Models.MemberObligation>
+<div class="row">
+    <div class="col-md-10 partial-background">
+
+        <p class="text-right">
+            <a href="~/MemberObligations/Create" title="Create New"><span class="glyphicon glyphicon-plus"></span></a>
+        </p>
+        @if (Model != null && Model.Count() > 0)
+        {
+
+            <table class="table table-responsive table-striped table-bordered">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ObligationType.ObligationName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RecurranceType.Recurrance)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CurrencyType.CurrencyName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Amount)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AdjustedBalance)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ObligationType.ObligationName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RecurranceType.Recurrance)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CurrencyType.CurrencyName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Amount)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AdjustedBalance)
+                        </td>
+                        <td class ="nowrap">
+                            @Html.ActionLink(" ", "Edit", new { id = item.ID }, new { @class = "glyphicon glyphicon-edit", @title = "Edit" })||
+                            @Html.ActionLink(" ", "Delete", new { id = item.ID }, new { @class = "glyphicon glyphicon-trash", @title = "Delete" })
+                            </td>
+</tr>
+                }
+
+            </table>
+        }
+        else
+        {
+            <span class="no-record">NO OBLIGATION FOR THE MEMBER</span>
+        }
+    </div>
+</div>

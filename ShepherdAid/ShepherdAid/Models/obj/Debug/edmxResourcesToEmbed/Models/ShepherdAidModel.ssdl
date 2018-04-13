@@ -1,0 +1,1061 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ShepherdAidDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AspNetGroups">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InstitutionID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="75" />
+    <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="75" />
+    <Property Name="LoginHint" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserGroupID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Initial" Type="nvarchar" MaxLength="15" />
+    <Property Name="OfficePhone" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MobilePhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Website" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Companies">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Initial" Type="nvarchar" MaxLength="15" />
+    <Property Name="OfficePhone" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MobilePhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Website" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Counties">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="5" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CurrencyTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CurrencyName" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="ShortName" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DocumentTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TypeName" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GenderTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TypeName" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InstitutionGroups">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Initial" Type="nvarchar" MaxLength="15" />
+    <Property Name="OfficePhone" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MobilePhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Website" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Institutions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InstitutionGroupID" Type="int" Nullable="false" />
+    <Property Name="InstitutionName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Initial" Type="nvarchar" MaxLength="50" />
+    <Property Name="OfficePhone" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MobilePhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Website" Type="nvarchar" MaxLength="50" />
+    <Property Name="StatusTypeID" Type="int" Nullable="false" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MaritalStatusTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TypeName" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MemberDocuments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MemberID" Type="int" Nullable="false" />
+    <Property Name="DocumentTypeID" Type="int" Nullable="false" />
+    <Property Name="DocumentPath" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MemberPhotos">
+    <Key>
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="MemberID" Type="int" Nullable="false" />
+    <Property Name="DocumentPath" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Members">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InstitutionID" Type="int" Nullable="false" />
+    <Property Name="MemberID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="SalutationTypeID" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="GenderTypeID" Type="int" Nullable="false" />
+    <Property Name="DateOfBirth" Type="datetime" Nullable="false" />
+    <Property Name="MaritalStatusTypeID" Type="int" Nullable="false" />
+    <Property Name="ResidentAddress" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="75" />
+    <Property Name="MobilePhone" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="OfficePhone" Type="nvarchar" MaxLength="15" />
+    <Property Name="NationalityTypeID" Type="int" Nullable="false" />
+    <Property Name="CountyID" Type="int" />
+    <Property Name="Region" Type="nvarchar" MaxLength="50" />
+    <Property Name="MemberTypeID" Type="int" Nullable="false" />
+    <Property Name="StatusTypeID" Type="int" Nullable="false" />
+    <Property Name="PhotoPath" Type="nvarchar" MaxLength="250" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="1280" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MembersObligations">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MemberID" Type="int" Nullable="false" />
+    <Property Name="ObligationID" Type="int" Nullable="false" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MemberTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TypeName" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+    <Property Name="InstitutionID" Type="int" />
+  </EntityType>
+  <EntityType Name="NationalityTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TypeName" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="Value" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Obligations">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ObligationTypeID" Type="int" Nullable="false" />
+    <Property Name="CurrencyTypeID" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="DateStarted" Type="datetime" Nullable="false" />
+    <Property Name="DateAdjusted" Type="datetime" Nullable="false" />
+    <Property Name="AdjustedBalance" Type="decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="RecurranceTypeID" Type="int" Nullable="false" />
+    <Property Name="ObligationStatusTypeID" Type="int" Nullable="false" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ObligationStatusTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StatusName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ObligationTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ObligationName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+    <Property Name="InstitutionID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrganizationGenderTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TypeName" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrganizationLeaders">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrganizationID" Type="int" Nullable="false" />
+    <Property Name="MemberID" Type="int" Nullable="false" />
+    <Property Name="PositionTypeID" Type="int" Nullable="false" />
+    <Property Name="StartDate" Type="date" Nullable="false" />
+    <Property Name="EndDate" Type="date" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrganizationMembers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrganizationID" Type="int" Nullable="false" />
+    <Property Name="MemberID" Type="int" Nullable="false" />
+    <Property Name="MembershipDate" Type="date" Nullable="false" />
+    <Property Name="StatusID" Type="int" Nullable="false" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Organizations">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InstitutionID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ShortName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateEstablished" Type="date" Nullable="false" />
+    <Property Name="Purpose" Type="nvarchar" MaxLength="500" />
+    <Property Name="OfficePhone" Type="nvarchar" MaxLength="15" />
+    <Property Name="MobilePhone" Type="nvarchar" MaxLength="15" />
+    <Property Name="Email" Type="nvarchar" MaxLength="75" />
+    <Property Name="Website" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrganizationGenderTypeID" Type="int" Nullable="false" />
+    <Property Name="OrganizationStatusTypeID" Type="int" Nullable="false" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrganizationStatusTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PositionTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrgranizationID" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Priority" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RecurranceTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Recurrance" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SalutationTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TypeName" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+    <Property Name="InstitutionID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StatusTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StatusName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SystemVariables">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Value" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RecordedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateRecorded" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Trackers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IpAddress" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="AreaAccessed" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ActionDate" Type="datetime" Nullable="false" />
+    <Property Name="PreviousValues" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AspNetGroups_Institutions">
+    <End Role="Institutions" Type="Self.Institutions" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetGroups" Type="Self.AspNetGroups" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institutions">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AspNetGroups">
+        <PropertyRef Name="InstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUsers_AspNetGroups">
+    <End Role="AspNetGroups" Type="Self.AspNetGroups" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetGroups">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AspNetUsers">
+        <PropertyRef Name="UserGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clients_Companies">
+    <End Role="Companies" Type="Self.Companies" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Clients" Type="Self.Clients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companies">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Clients">
+        <PropertyRef Name="CompanyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InstitutionGroups_Clients">
+    <End Role="Clients" Type="Self.Clients" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="InstitutionGroups" Type="Self.InstitutionGroups" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="InstitutionGroups">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Institutions_InstitutionGroups">
+    <End Role="InstitutionGroups" Type="Self.InstitutionGroups" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Institutions" Type="Self.Institutions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InstitutionGroups">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Institutions">
+        <PropertyRef Name="InstitutionGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Institutions_StatusTypes">
+    <End Role="StatusTypes" Type="Self.StatusTypes" Multiplicity="1" />
+    <End Role="Institutions" Type="Self.Institutions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Institutions">
+        <PropertyRef Name="StatusTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MemberDocuments_DocumentTypes">
+    <End Role="DocumentTypes" Type="Self.DocumentTypes" Multiplicity="1" />
+    <End Role="MemberDocuments" Type="Self.MemberDocuments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MemberDocuments">
+        <PropertyRef Name="DocumentTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MemberDocuments_Members">
+    <End Role="Members" Type="Self.Members" Multiplicity="1" />
+    <End Role="MemberDocuments" Type="Self.MemberDocuments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Members">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MemberDocuments">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MemberPhotos_Members">
+    <End Role="Members" Type="Self.Members" Multiplicity="1" />
+    <End Role="MemberPhotos" Type="Self.MemberPhotos" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Members">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MemberPhotos">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Members_Counties">
+    <End Role="Counties" Type="Self.Counties" Multiplicity="0..1" />
+    <End Role="Members" Type="Self.Members" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Counties">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Members">
+        <PropertyRef Name="CountyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Members_GenderTypes">
+    <End Role="GenderTypes" Type="Self.GenderTypes" Multiplicity="1" />
+    <End Role="Members" Type="Self.Members" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GenderTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Members">
+        <PropertyRef Name="GenderTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Members_Institutions">
+    <End Role="Institutions" Type="Self.Institutions" Multiplicity="1" />
+    <End Role="Members" Type="Self.Members" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institutions">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Members">
+        <PropertyRef Name="InstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Members_MaritalStatusTypes">
+    <End Role="MaritalStatusTypes" Type="Self.MaritalStatusTypes" Multiplicity="1" />
+    <End Role="Members" Type="Self.Members" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MaritalStatusTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Members">
+        <PropertyRef Name="MaritalStatusTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Members_MemberTypes">
+    <End Role="MemberTypes" Type="Self.MemberTypes" Multiplicity="1" />
+    <End Role="Members" Type="Self.Members" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MemberTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Members">
+        <PropertyRef Name="MemberTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Members_NationalityTypes">
+    <End Role="NationalityTypes" Type="Self.NationalityTypes" Multiplicity="1" />
+    <End Role="Members" Type="Self.Members" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NationalityTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Members">
+        <PropertyRef Name="NationalityTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Members_SalutationTypes">
+    <End Role="SalutationTypes" Type="Self.SalutationTypes" Multiplicity="1" />
+    <End Role="Members" Type="Self.Members" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalutationTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Members">
+        <PropertyRef Name="SalutationTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Members_StatusTypes">
+    <End Role="StatusTypes" Type="Self.StatusTypes" Multiplicity="1" />
+    <End Role="Members" Type="Self.Members" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Members">
+        <PropertyRef Name="StatusTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MembersObligations_Members">
+    <End Role="Members" Type="Self.Members" Multiplicity="1" />
+    <End Role="MembersObligations" Type="Self.MembersObligations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Members">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MembersObligations">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MembersObligations_Obligations">
+    <End Role="Obligations" Type="Self.Obligations" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MembersObligations" Type="Self.MembersObligations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Obligations">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MembersObligations">
+        <PropertyRef Name="ObligationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MemberTypes_Institutions">
+    <End Role="Institutions" Type="Self.Institutions" Multiplicity="0..1" />
+    <End Role="MemberTypes" Type="Self.MemberTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institutions">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MemberTypes">
+        <PropertyRef Name="InstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obligations_CurrencyTypes">
+    <End Role="CurrencyTypes" Type="Self.CurrencyTypes" Multiplicity="1" />
+    <End Role="Obligations" Type="Self.Obligations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CurrencyTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Obligations">
+        <PropertyRef Name="CurrencyTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obligations_ObligationStatusTypes">
+    <End Role="ObligationStatusTypes" Type="Self.ObligationStatusTypes" Multiplicity="1" />
+    <End Role="Obligations" Type="Self.Obligations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ObligationStatusTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Obligations">
+        <PropertyRef Name="ObligationStatusTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obligations_ObligationTypes">
+    <End Role="ObligationTypes" Type="Self.ObligationTypes" Multiplicity="1" />
+    <End Role="Obligations" Type="Self.Obligations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ObligationTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Obligations">
+        <PropertyRef Name="ObligationTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obligations_RecurranceTypes">
+    <End Role="RecurranceTypes" Type="Self.RecurranceTypes" Multiplicity="1" />
+    <End Role="Obligations" Type="Self.Obligations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RecurranceTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Obligations">
+        <PropertyRef Name="RecurranceTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObligationTypes_Institutions">
+    <End Role="Institutions" Type="Self.Institutions" Multiplicity="1" />
+    <End Role="ObligationTypes" Type="Self.ObligationTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institutions">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ObligationTypes">
+        <PropertyRef Name="InstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrganizationLeaders_Members">
+    <End Role="Members" Type="Self.Members" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OrganizationLeaders" Type="Self.OrganizationLeaders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Members">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OrganizationLeaders">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrganizationLeaders_Organizations">
+    <End Role="Organizations" Type="Self.Organizations" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OrganizationLeaders" Type="Self.OrganizationLeaders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Organizations">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OrganizationLeaders">
+        <PropertyRef Name="OrganizationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrganizationLeaders_PositionTypes">
+    <End Role="PositionTypes" Type="Self.PositionTypes" Multiplicity="1" />
+    <End Role="OrganizationLeaders" Type="Self.OrganizationLeaders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PositionTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OrganizationLeaders">
+        <PropertyRef Name="PositionTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrganizationMembers_Members">
+    <End Role="Members" Type="Self.Members" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OrganizationMembers" Type="Self.OrganizationMembers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Members">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OrganizationMembers">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrganizationMembers_Organizations">
+    <End Role="Organizations" Type="Self.Organizations" Multiplicity="1" />
+    <End Role="OrganizationMembers" Type="Self.OrganizationMembers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Organizations">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OrganizationMembers">
+        <PropertyRef Name="OrganizationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrganizationMembers_StatusTypes">
+    <End Role="StatusTypes" Type="Self.StatusTypes" Multiplicity="1" />
+    <End Role="OrganizationMembers" Type="Self.OrganizationMembers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OrganizationMembers">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Organizations_OrganizationGenderTypes">
+    <End Role="OrganizationGenderTypes" Type="Self.OrganizationGenderTypes" Multiplicity="1" />
+    <End Role="Organizations" Type="Self.Organizations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrganizationGenderTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Organizations">
+        <PropertyRef Name="OrganizationGenderTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Organizations_OrganizationStatusTypes">
+    <End Role="OrganizationStatusTypes" Type="Self.OrganizationStatusTypes" Multiplicity="1" />
+    <End Role="Organizations" Type="Self.Organizations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrganizationStatusTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Organizations">
+        <PropertyRef Name="OrganizationStatusTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalutationTypes_Institutions">
+    <End Role="Institutions" Type="Self.Institutions" Multiplicity="1" />
+    <End Role="SalutationTypes" Type="Self.SalutationTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institutions">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SalutationTypes">
+        <PropertyRef Name="InstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="AddCreatedUserRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="InstitutionID" Type="int" Mode="In" />
+    <Parameter Name="GroupID" Type="int" Mode="In" />
+    <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AddGroupRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GroupID" Type="int" Mode="In" />
+    <Parameter Name="RoleID" Type="nvarchar" Mode="In" />
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="ApplicationUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ClientID" Type="int" Mode="In" />
+    <Parameter Name="InstitutionGroupID" Type="int" Mode="In" />
+    <Parameter Name="InstitutionID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="AssignGroupAssignedRoleToUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RoleID" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AssignRoleToUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+    <Parameter Name="RoleID" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DeleteAddedGroupRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GroupID" Type="int" Mode="In" />
+    <Parameter Name="RoleID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="DeleteAddedUserRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+    <Parameter Name="RoleID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetDefaultInstitutionGroupCount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="InstitutionID" Type="int" Mode="In" />
+    <Parameter Name="GroupName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GroupAssignedRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GroupID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GroupAvailableRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GroupID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="OrganizationNonMembers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="InstitutionID" Type="int" Mode="In" />
+    <Parameter Name="OrganizationID" Type="int" Mode="In" />
+    <Parameter Name="Search" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="ReportGroupAssignedRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GroupID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ReportUserAssignedRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="ReportUsersAndGroups" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="InstitutionID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="RevokeGroupRevokedRoleFromUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RoleID" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="RevokeGroupRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GroupID" Type="int" Mode="In" />
+    <Parameter Name="RoleID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="RevokeUserRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+    <Parameter Name="RoleID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UserAssignedRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UserAvailableRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="ShepherdAidDBModelStoreContainer">
+    <EntitySet Name="AspNetGroups" EntityType="Self.AspNetGroups" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Companies" EntityType="Self.Companies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Counties" EntityType="Self.Counties" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CurrencyTypes" EntityType="Self.CurrencyTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DocumentTypes" EntityType="Self.DocumentTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GenderTypes" EntityType="Self.GenderTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InstitutionGroups" EntityType="Self.InstitutionGroups" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Institutions" EntityType="Self.Institutions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MaritalStatusTypes" EntityType="Self.MaritalStatusTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MemberDocuments" EntityType="Self.MemberDocuments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MemberPhotos" EntityType="Self.MemberPhotos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Members" EntityType="Self.Members" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MembersObligations" EntityType="Self.MembersObligations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MemberTypes" EntityType="Self.MemberTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NationalityTypes" EntityType="Self.NationalityTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Obligations" EntityType="Self.Obligations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ObligationStatusTypes" EntityType="Self.ObligationStatusTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ObligationTypes" EntityType="Self.ObligationTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrganizationGenderTypes" EntityType="Self.OrganizationGenderTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrganizationLeaders" EntityType="Self.OrganizationLeaders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrganizationMembers" EntityType="Self.OrganizationMembers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Organizations" EntityType="Self.Organizations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrganizationStatusTypes" EntityType="Self.OrganizationStatusTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PositionTypes" EntityType="Self.PositionTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RecurranceTypes" EntityType="Self.RecurranceTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SalutationTypes" EntityType="Self.SalutationTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatusTypes" EntityType="Self.StatusTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SystemVariables" EntityType="Self.SystemVariables" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Trackers" EntityType="Self.Trackers" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_AspNetGroups_Institutions" Association="Self.FK_AspNetGroups_Institutions">
+      <End Role="Institutions" EntitySet="Institutions" />
+      <End Role="AspNetGroups" EntitySet="AspNetGroups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUsers_AspNetGroups" Association="Self.FK_AspNetUsers_AspNetGroups">
+      <End Role="AspNetGroups" EntitySet="AspNetGroups" />
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clients_Companies" Association="Self.FK_Clients_Companies">
+      <End Role="Companies" EntitySet="Companies" />
+      <End Role="Clients" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InstitutionGroups_Clients" Association="Self.FK_InstitutionGroups_Clients">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="InstitutionGroups" EntitySet="InstitutionGroups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Institutions_InstitutionGroups" Association="Self.FK_Institutions_InstitutionGroups">
+      <End Role="InstitutionGroups" EntitySet="InstitutionGroups" />
+      <End Role="Institutions" EntitySet="Institutions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Institutions_StatusTypes" Association="Self.FK_Institutions_StatusTypes">
+      <End Role="StatusTypes" EntitySet="StatusTypes" />
+      <End Role="Institutions" EntitySet="Institutions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MemberDocuments_DocumentTypes" Association="Self.FK_MemberDocuments_DocumentTypes">
+      <End Role="DocumentTypes" EntitySet="DocumentTypes" />
+      <End Role="MemberDocuments" EntitySet="MemberDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MemberDocuments_Members" Association="Self.FK_MemberDocuments_Members">
+      <End Role="Members" EntitySet="Members" />
+      <End Role="MemberDocuments" EntitySet="MemberDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MemberPhotos_Members" Association="Self.FK_MemberPhotos_Members">
+      <End Role="Members" EntitySet="Members" />
+      <End Role="MemberPhotos" EntitySet="MemberPhotos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Members_Counties" Association="Self.FK_Members_Counties">
+      <End Role="Counties" EntitySet="Counties" />
+      <End Role="Members" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Members_GenderTypes" Association="Self.FK_Members_GenderTypes">
+      <End Role="GenderTypes" EntitySet="GenderTypes" />
+      <End Role="Members" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Members_Institutions" Association="Self.FK_Members_Institutions">
+      <End Role="Institutions" EntitySet="Institutions" />
+      <End Role="Members" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Members_MaritalStatusTypes" Association="Self.FK_Members_MaritalStatusTypes">
+      <End Role="MaritalStatusTypes" EntitySet="MaritalStatusTypes" />
+      <End Role="Members" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Members_MemberTypes" Association="Self.FK_Members_MemberTypes">
+      <End Role="MemberTypes" EntitySet="MemberTypes" />
+      <End Role="Members" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Members_NationalityTypes" Association="Self.FK_Members_NationalityTypes">
+      <End Role="NationalityTypes" EntitySet="NationalityTypes" />
+      <End Role="Members" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Members_SalutationTypes" Association="Self.FK_Members_SalutationTypes">
+      <End Role="SalutationTypes" EntitySet="SalutationTypes" />
+      <End Role="Members" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Members_StatusTypes" Association="Self.FK_Members_StatusTypes">
+      <End Role="StatusTypes" EntitySet="StatusTypes" />
+      <End Role="Members" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MembersObligations_Members" Association="Self.FK_MembersObligations_Members">
+      <End Role="Members" EntitySet="Members" />
+      <End Role="MembersObligations" EntitySet="MembersObligations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MembersObligations_Obligations" Association="Self.FK_MembersObligations_Obligations">
+      <End Role="Obligations" EntitySet="Obligations" />
+      <End Role="MembersObligations" EntitySet="MembersObligations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MemberTypes_Institutions" Association="Self.FK_MemberTypes_Institutions">
+      <End Role="Institutions" EntitySet="Institutions" />
+      <End Role="MemberTypes" EntitySet="MemberTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obligations_CurrencyTypes" Association="Self.FK_Obligations_CurrencyTypes">
+      <End Role="CurrencyTypes" EntitySet="CurrencyTypes" />
+      <End Role="Obligations" EntitySet="Obligations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obligations_ObligationStatusTypes" Association="Self.FK_Obligations_ObligationStatusTypes">
+      <End Role="ObligationStatusTypes" EntitySet="ObligationStatusTypes" />
+      <End Role="Obligations" EntitySet="Obligations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obligations_ObligationTypes" Association="Self.FK_Obligations_ObligationTypes">
+      <End Role="ObligationTypes" EntitySet="ObligationTypes" />
+      <End Role="Obligations" EntitySet="Obligations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obligations_RecurranceTypes" Association="Self.FK_Obligations_RecurranceTypes">
+      <End Role="RecurranceTypes" EntitySet="RecurranceTypes" />
+      <End Role="Obligations" EntitySet="Obligations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObligationTypes_Institutions" Association="Self.FK_ObligationTypes_Institutions">
+      <End Role="Institutions" EntitySet="Institutions" />
+      <End Role="ObligationTypes" EntitySet="ObligationTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrganizationLeaders_Members" Association="Self.FK_OrganizationLeaders_Members">
+      <End Role="Members" EntitySet="Members" />
+      <End Role="OrganizationLeaders" EntitySet="OrganizationLeaders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrganizationLeaders_Organizations" Association="Self.FK_OrganizationLeaders_Organizations">
+      <End Role="Organizations" EntitySet="Organizations" />
+      <End Role="OrganizationLeaders" EntitySet="OrganizationLeaders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrganizationLeaders_PositionTypes" Association="Self.FK_OrganizationLeaders_PositionTypes">
+      <End Role="PositionTypes" EntitySet="PositionTypes" />
+      <End Role="OrganizationLeaders" EntitySet="OrganizationLeaders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrganizationMembers_Members" Association="Self.FK_OrganizationMembers_Members">
+      <End Role="Members" EntitySet="Members" />
+      <End Role="OrganizationMembers" EntitySet="OrganizationMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrganizationMembers_Organizations" Association="Self.FK_OrganizationMembers_Organizations">
+      <End Role="Organizations" EntitySet="Organizations" />
+      <End Role="OrganizationMembers" EntitySet="OrganizationMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrganizationMembers_StatusTypes" Association="Self.FK_OrganizationMembers_StatusTypes">
+      <End Role="StatusTypes" EntitySet="StatusTypes" />
+      <End Role="OrganizationMembers" EntitySet="OrganizationMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Organizations_OrganizationGenderTypes" Association="Self.FK_Organizations_OrganizationGenderTypes">
+      <End Role="OrganizationGenderTypes" EntitySet="OrganizationGenderTypes" />
+      <End Role="Organizations" EntitySet="Organizations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Organizations_OrganizationStatusTypes" Association="Self.FK_Organizations_OrganizationStatusTypes">
+      <End Role="OrganizationStatusTypes" EntitySet="OrganizationStatusTypes" />
+      <End Role="Organizations" EntitySet="Organizations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalutationTypes_Institutions" Association="Self.FK_SalutationTypes_Institutions">
+      <End Role="Institutions" EntitySet="Institutions" />
+      <End Role="SalutationTypes" EntitySet="SalutationTypes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

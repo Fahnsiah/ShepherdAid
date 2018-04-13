@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<fieldset>
+    <legend>MEMBERS AND ORGANIZATIONS PAYMENT PORTAL</legend>
+    <div class="row">
+        <div class="col-md-10">
+            <ul class="nav nav-tabs">
+                <li class="btn btn-default" id="member-payment-li"><a href="#member-payment-tab">MEMBERS</a></li>
+                <li class="btn btn-default" id="organization-payment-li"><a href="#organization-payment-tab">ORGANIZATIONS</a></li>
+            </ul>
+
+            <section id="member-payment-tab" class="tab-content active">
+                <h3 class="text-warning">Search for member to make payment</h3>
+                @using (Html.BeginForm())
+                {
+                    <div class="input-group">
+                        <input type="text" class="search-field" placeholder="Member ID" id="search" name="MemberID" />
+                        <input type="text" class="search-field" placeholder="First Name" id="search" name="FirstName" />
+                        <input type="text" class="search-field" placeholder="Last Name" id="search" name="LastName" />
+                        <button class="btn btn-primary" type="submit" id="btn-members">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </div>
+                    @*</form>*@
+                }
+                @*member tab*@
+                <div id="div-member-payment">
+                    
+                </div>
+                @{Html.RenderAction("MemberPartial", "Payments");}
+            </section>
+
+            <section id="organization-payment-tab" class="tab-content hide">
+                <div id="div-organization-payment">
+                    @*@{Html.RenderAction("MemberPartial", "Payments");}*@
+                </div>
+            </section>
+
+        </div>
+        <div class="col-md-2 col-sm-12 related-tasks">
+            <span class="related-tasks-header">RELATED TASKS</span><br />
+            @Html.ActionLink("Make Donation ", "Edit", new { id = 1 }) <br />
+            @Html.ActionLink("Make Pledge", "Delete", new { id = 1 }) <br />
+        </div>
+    </div>
+    <div class=" col-md-12">
+    </div>
+</fieldset>
+
+@section Scripts{
+    <script src="~/Scripts/Custom/tabs.js"></script>
+}

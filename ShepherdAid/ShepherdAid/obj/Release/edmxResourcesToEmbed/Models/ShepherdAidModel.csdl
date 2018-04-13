@@ -1,0 +1,1751 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ShepherdAidDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ShepherdAidDBEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="AddGroupRoles">
+      <Parameter Name="GroupID" Mode="In" Type="Int32" />
+      <Parameter Name="RoleID" Mode="In" Type="String" />
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="FuncAddGroupRoles">
+      <Parameter Name="GroupID" Mode="In" Type="Int32" />
+      <Parameter Name="RoleID" Mode="In" Type="String" />
+      <Parameter Name="Username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ApplicationUsers">
+      <Parameter Name="ClientID" Mode="In" Type="Int32" />
+      <Parameter Name="InstitutionGroupID" Mode="In" Type="Int32" />
+      <Parameter Name="InstitutionID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="FuncApplicationUsers" ReturnType="Collection(ShepherdAidDBModel.FuncApplicationUsers_Result)">
+      <Parameter Name="ClientID" Mode="In" Type="Int32" />
+      <Parameter Name="InstitutionGroupID" Mode="In" Type="Int32" />
+      <Parameter Name="InstitutionID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="RevokeGroupRevokedRoleFromUser">
+      <Parameter Name="RoleID" Mode="In" Type="String" />
+      <Parameter Name="UserID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="FuncRevokeGroupRevokedRoleFromUser">
+      <Parameter Name="RoleID" Mode="In" Type="String" />
+      <Parameter Name="UserID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="AddCreatedUserRoles">
+      <Parameter Name="InstitutionID" Mode="In" Type="Int32" />
+      <Parameter Name="GroupID" Mode="In" Type="Int32" />
+      <Parameter Name="UserID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="FuncAddCreatedUserRoles">
+      <Parameter Name="InstitutionID" Mode="In" Type="Int32" />
+      <Parameter Name="GroupID" Mode="In" Type="Int32" />
+      <Parameter Name="UserID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteAddedGroupRole">
+      <Parameter Name="GroupID" Mode="In" Type="Int32" />
+      <Parameter Name="RoleID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="FuncDeleteAddedGroupRole">
+      <Parameter Name="GroupID" Mode="In" Type="Int32" />
+      <Parameter Name="RoleID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GroupAssignedRoles">
+      <Parameter Name="GroupID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GroupAvailableRoles" ReturnType="Collection(ShepherdAidDBModel.GroupAvailableRoles_Result)">
+      <Parameter Name="GroupID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UserAssignedRoles" ReturnType="Collection(ShepherdAidDBModel.UserAssignedRoles_Result)">
+      <Parameter Name="UserID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UserAvailableRoles" ReturnType="Collection(ShepherdAidDBModel.UserAvailableRoles_Result)">
+      <Parameter Name="UserID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="FuncGroupAvailableRoles" ReturnType="Collection(ShepherdAidDBModel.FuncGroupAvailableRoles_Result)">
+      <Parameter Name="GroupID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="FuncUserAssignedRoles" ReturnType="Collection(ShepherdAidDBModel.FuncUserAssignedRoles_Result)">
+      <Parameter Name="UserID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="FuncUserAvailableRoles" ReturnType="Collection(ShepherdAidDBModel.FuncUserAvailableRoles_Result)">
+      <Parameter Name="UserID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="AssignGroupAssignedRoleToUser">
+      <Parameter Name="RoleID" Mode="In" Type="String" />
+      <Parameter Name="UserID" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="FuncAssignGroupAssignedRoleToUser">
+      <Parameter Name="RoleID" Mode="In" Type="String" />
+      <Parameter Name="UserID" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="AssignRoleToUser">
+      <Parameter Name="UserID" Mode="In" Type="String" />
+      <Parameter Name="RoleID" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="FuncAssignRoleToUser">
+      <Parameter Name="UserID" Mode="In" Type="String" />
+      <Parameter Name="RoleID" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteAddedUserRole">
+      <Parameter Name="UserID" Mode="In" Type="String" />
+      <Parameter Name="RoleID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="FuncDeleteAddedUserRole">
+      <Parameter Name="UserID" Mode="In" Type="String" />
+      <Parameter Name="RoleID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="RevokeGroupRole">
+      <Parameter Name="GroupID" Mode="In" Type="Int32" />
+      <Parameter Name="RoleID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="RevokeUserRole">
+      <Parameter Name="UserID" Mode="In" Type="String" />
+      <Parameter Name="RoleID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="FuncRevokeGroupRole">
+      <Parameter Name="GroupID" Mode="In" Type="Int32" />
+      <Parameter Name="RoleID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="FuncRevokeUserRole">
+      <Parameter Name="UserID" Mode="In" Type="String" />
+      <Parameter Name="RoleID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ReportUserAssignedRoles" ReturnType="Collection(ShepherdAidDBModel.ReportUserAssignedRoles_Result)">
+      <Parameter Name="UserID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="FuncReportUserAssignedRoles" ReturnType="Collection(ShepherdAidDBModel.FuncReportUserAssignedRoles_Result)">
+      <Parameter Name="UserID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ReportGroupAssignedRoles" ReturnType="Collection(ShepherdAidDBModel.ReportGroupAssignedRoles_Result)">
+      <Parameter Name="GroupID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ReportUsersAndGroups" ReturnType="Collection(ShepherdAidDBModel.ReportUsersAndGroups_Result)">
+      <Parameter Name="InstitutionID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="FuncUsersAndGroups" ReturnType="Collection(ShepherdAidDBModel.FuncUsersAndGroups_Result)">
+      <Parameter Name="InstitutionID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="FuncReportGroupAssignedRoles" ReturnType="Collection(ShepherdAidDBModel.FuncReportGroupAssignedRoles_Result)">
+      <Parameter Name="GroupID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="FuncGroupAssignedRoles" ReturnType="Collection(ShepherdAidDBModel.FuncGroupAssignedRoles_Result)">
+      <Parameter Name="GroupID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetDefaultInstitutionGroupCount" ReturnType="Collection(Int32)">
+      <Parameter Name="InstitutionID" Mode="In" Type="Int32" />
+      <Parameter Name="GroupName" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="AspNetGroups" EntityType="ShepherdAidDBModel.AspNetGroup" />
+    <EntitySet Name="AspNetUsers" EntityType="ShepherdAidDBModel.AspNetUser" />
+    <AssociationSet Name="FK_AspNetUsers_AspNetGroups" Association="ShepherdAidDBModel.FK_AspNetUsers_AspNetGroups">
+      <End Role="AspNetGroup" EntitySet="AspNetGroups" />
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+    </AssociationSet>
+    <EntitySet Name="Clients" EntityType="ShepherdAidDBModel.Client" />
+    <EntitySet Name="Companies" EntityType="ShepherdAidDBModel.Company" />
+    <EntitySet Name="Counties" EntityType="ShepherdAidDBModel.County" />
+    <EntitySet Name="GenderTypes" EntityType="ShepherdAidDBModel.GenderType" />
+    <EntitySet Name="InstitutionGroups" EntityType="ShepherdAidDBModel.InstitutionGroup" />
+    <EntitySet Name="Institutions" EntityType="ShepherdAidDBModel.Institution" />
+    <EntitySet Name="MaritalStatusTypes" EntityType="ShepherdAidDBModel.MaritalStatusType" />
+    <EntitySet Name="Members" EntityType="ShepherdAidDBModel.Member" />
+    <EntitySet Name="MemberTypes" EntityType="ShepherdAidDBModel.MemberType" />
+    <EntitySet Name="NationalityTypes" EntityType="ShepherdAidDBModel.NationalityType" />
+    <EntitySet Name="OrganizationGenderTypes" EntityType="ShepherdAidDBModel.OrganizationGenderType" />
+    <EntitySet Name="OrganizationMembers" EntityType="ShepherdAidDBModel.OrganizationMember" />
+    <EntitySet Name="OrganizationStatusTypes" EntityType="ShepherdAidDBModel.OrganizationStatusType" />
+    <EntitySet Name="PositionTypes" EntityType="ShepherdAidDBModel.PositionType" />
+    <EntitySet Name="SalutationTypes" EntityType="ShepherdAidDBModel.SalutationType" />
+    <EntitySet Name="StatusTypes" EntityType="ShepherdAidDBModel.StatusType" />
+    <AssociationSet Name="FK_AspNetGroups_Institutions" Association="ShepherdAidDBModel.FK_AspNetGroups_Institutions">
+      <End Role="Institution" EntitySet="Institutions" />
+      <End Role="AspNetGroup" EntitySet="AspNetGroups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clients_Companies" Association="ShepherdAidDBModel.FK_Clients_Companies">
+      <End Role="Company" EntitySet="Companies" />
+      <End Role="Client" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InstitutionGroups_Clients" Association="ShepherdAidDBModel.FK_InstitutionGroups_Clients">
+      <End Role="Client" EntitySet="Clients" />
+      <End Role="InstitutionGroup" EntitySet="InstitutionGroups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Members_Counties" Association="ShepherdAidDBModel.FK_Members_Counties">
+      <End Role="County" EntitySet="Counties" />
+      <End Role="Member" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Members_GenderTypes" Association="ShepherdAidDBModel.FK_Members_GenderTypes">
+      <End Role="GenderType" EntitySet="GenderTypes" />
+      <End Role="Member" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Institutions_InstitutionGroups" Association="ShepherdAidDBModel.FK_Institutions_InstitutionGroups">
+      <End Role="InstitutionGroup" EntitySet="InstitutionGroups" />
+      <End Role="Institution" EntitySet="Institutions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Institutions_StatusTypes" Association="ShepherdAidDBModel.FK_Institutions_StatusTypes">
+      <End Role="StatusType" EntitySet="StatusTypes" />
+      <End Role="Institution" EntitySet="Institutions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Members_Institutions" Association="ShepherdAidDBModel.FK_Members_Institutions">
+      <End Role="Institution" EntitySet="Institutions" />
+      <End Role="Member" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MemberTypes_Institutions" Association="ShepherdAidDBModel.FK_MemberTypes_Institutions">
+      <End Role="Institution" EntitySet="Institutions" />
+      <End Role="MemberType" EntitySet="MemberTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalutationTypes_Institutions" Association="ShepherdAidDBModel.FK_SalutationTypes_Institutions">
+      <End Role="Institution" EntitySet="Institutions" />
+      <End Role="SalutationType" EntitySet="SalutationTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Members_MaritalStatusTypes" Association="ShepherdAidDBModel.FK_Members_MaritalStatusTypes">
+      <End Role="MaritalStatusType" EntitySet="MaritalStatusTypes" />
+      <End Role="Member" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Members_MemberTypes" Association="ShepherdAidDBModel.FK_Members_MemberTypes">
+      <End Role="MemberType" EntitySet="MemberTypes" />
+      <End Role="Member" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Members_NationalityTypes" Association="ShepherdAidDBModel.FK_Members_NationalityTypes">
+      <End Role="NationalityType" EntitySet="NationalityTypes" />
+      <End Role="Member" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Members_SalutationTypes" Association="ShepherdAidDBModel.FK_Members_SalutationTypes">
+      <End Role="SalutationType" EntitySet="SalutationTypes" />
+      <End Role="Member" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Members_StatusTypes" Association="ShepherdAidDBModel.FK_Members_StatusTypes">
+      <End Role="StatusType" EntitySet="StatusTypes" />
+      <End Role="Member" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrganizationMembers_Members" Association="ShepherdAidDBModel.FK_OrganizationMembers_Members">
+      <End Role="Member" EntitySet="Members" />
+      <End Role="OrganizationMember" EntitySet="OrganizationMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrganizationMembers_StatusTypes" Association="ShepherdAidDBModel.FK_OrganizationMembers_StatusTypes">
+      <End Role="StatusType" EntitySet="StatusTypes" />
+      <End Role="OrganizationMember" EntitySet="OrganizationMembers" />
+    </AssociationSet>
+    <EntitySet Name="SystemVariables" EntityType="ShepherdAidDBModel.SystemVariable" />
+    <EntitySet Name="Trackers" EntityType="ShepherdAidDBModel.Tracker" />
+    <EntitySet Name="ObligationStatusTypes" EntityType="ShepherdAidDBModel.ObligationStatusType" />
+    <EntitySet Name="ObligationTypes" EntityType="ShepherdAidDBModel.ObligationType" />
+    <EntitySet Name="RecurranceTypes" EntityType="ShepherdAidDBModel.RecurranceType" />
+    <AssociationSet Name="FK_ObligationTypes_Institutions" Association="ShepherdAidDBModel.FK_ObligationTypes_Institutions">
+      <End Role="Institution" EntitySet="Institutions" />
+      <End Role="ObligationType" EntitySet="ObligationTypes" />
+    </AssociationSet>
+    <EntitySet Name="CurrencyTypes" EntityType="ShepherdAidDBModel.CurrencyType" />
+    <EntitySet Name="DocumentTypes" EntityType="ShepherdAidDBModel.DocumentType" />
+    <EntitySet Name="MemberDocuments" EntityType="ShepherdAidDBModel.MemberDocument" />
+    <AssociationSet Name="FK_MemberDocuments_DocumentTypes" Association="ShepherdAidDBModel.FK_MemberDocuments_DocumentTypes">
+      <End Role="DocumentType" EntitySet="DocumentTypes" />
+      <End Role="MemberDocument" EntitySet="MemberDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MemberDocuments_Members" Association="ShepherdAidDBModel.FK_MemberDocuments_Members">
+      <End Role="Member" EntitySet="Members" />
+      <End Role="MemberDocument" EntitySet="MemberDocuments" />
+    </AssociationSet>
+    <EntitySet Name="AspNetRoles" EntityType="ShepherdAidDBModel.AspNetRole" />
+    <FunctionImport Name="FuncGetDefaultInstitutionGroupCount" ReturnType="Collection(ShepherdAidDBModel.FuncGetDefaultInstitutionGroupCount_Result)">
+      <Parameter Name="InstitutionID" Mode="In" Type="Int32" />
+      <Parameter Name="GroupName" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="Organizations" EntityType="ShepherdAidDBModel.Organization" />
+    <AssociationSet Name="FK_Organizations_OrganizationGenderTypes" Association="ShepherdAidDBModel.FK_Organizations_OrganizationGenderTypes">
+      <End Role="OrganizationGenderType" EntitySet="OrganizationGenderTypes" />
+      <End Role="Organization" EntitySet="Organizations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrganizationMembers_Organizations" Association="ShepherdAidDBModel.FK_OrganizationMembers_Organizations">
+      <End Role="Organization" EntitySet="Organizations" />
+      <End Role="OrganizationMember" EntitySet="OrganizationMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Organizations_OrganizationStatusTypes" Association="ShepherdAidDBModel.FK_Organizations_OrganizationStatusTypes">
+      <End Role="OrganizationStatusType" EntitySet="OrganizationStatusTypes" />
+      <End Role="Organization" EntitySet="Organizations" />
+    </AssociationSet>
+    <FunctionImport Name="OrganizationNonMembers" ReturnType="Collection(ShepherdAidDBModel.OrganizationNonMembers_Result)">
+      <Parameter Name="InstitutionID" Mode="In" Type="Int32" />
+      <Parameter Name="OrganizationID" Mode="In" Type="Int32" />
+      <Parameter Name="Search" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="FuncOrganizationNonMembers" ReturnType="Collection(ShepherdAidDBModel.FuncOrganizationNonMembers_Result)">
+      <Parameter Name="InstitutionID" Mode="In" Type="Int32" />
+      <Parameter Name="OrganizationID" Mode="In" Type="Int32" />
+      <Parameter Name="Search" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="OrganizationLeaderMembers" ReturnType="Collection(ShepherdAidDBModel.OrganizationLeaderMembers_Result)">
+      <Parameter Name="InstitutionID" Mode="In" Type="Int32" />
+      <Parameter Name="OrganizationID" Mode="In" Type="Int32" />
+      <Parameter Name="Search" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="FuncOrganizationLeaderMembers" ReturnType="Collection(ShepherdAidDBModel.FuncOrganizationLeaderMembers_Result)">
+      <Parameter Name="InstitutionID" Mode="In" Type="Int32" />
+      <Parameter Name="OrganizationID" Mode="In" Type="Int32" />
+      <Parameter Name="Search" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="MemberPhotos" EntityType="ShepherdAidDBModel.MemberPhoto" />
+    <AssociationSet Name="FK_MemberPhotos_Members" Association="ShepherdAidDBModel.FK_MemberPhotos_Members">
+      <End Role="Member" EntitySet="Members" />
+      <End Role="MemberPhoto" EntitySet="MemberPhotos" />
+    </AssociationSet>
+    <EntitySet Name="OrganizationPositionTypes" EntityType="ShepherdAidDBModel.OrganizationPositionType" />
+    <AssociationSet Name="FK_OrganizationPositionTypes_Institutions" Association="ShepherdAidDBModel.FK_OrganizationPositionTypes_Institutions">
+      <End Role="Institution" EntitySet="Institutions" />
+      <End Role="OrganizationPositionType" EntitySet="OrganizationPositionTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrganizationPositionTypes_Organizations" Association="ShepherdAidDBModel.FK_OrganizationPositionTypes_Organizations">
+      <End Role="Organization" EntitySet="Organizations" />
+      <End Role="OrganizationPositionType" EntitySet="OrganizationPositionTypes" />
+    </AssociationSet>
+    <EntitySet Name="OrganizationLeaders" EntityType="ShepherdAidDBModel.OrganizationLeader" />
+    <AssociationSet Name="FK_Organizations_Institutions" Association="ShepherdAidDBModel.FK_Organizations_Institutions">
+      <End Role="Institution" EntitySet="Institutions" />
+      <End Role="Organization" EntitySet="Organizations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrganizationLeaders_Members" Association="ShepherdAidDBModel.FK_OrganizationLeaders_Members">
+      <End Role="Member" EntitySet="Members" />
+      <End Role="OrganizationLeader" EntitySet="OrganizationLeaders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrganizationLeaders_Organizations" Association="ShepherdAidDBModel.FK_OrganizationLeaders_Organizations">
+      <End Role="Organization" EntitySet="Organizations" />
+      <End Role="OrganizationLeader" EntitySet="OrganizationLeaders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrganizationLeaders_PositionTypes" Association="ShepherdAidDBModel.FK_OrganizationLeaders_PositionTypes">
+      <End Role="OrganizationPositionType" EntitySet="OrganizationPositionTypes" />
+      <End Role="OrganizationLeader" EntitySet="OrganizationLeaders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrganizationLeaders_StatusTypes" Association="ShepherdAidDBModel.FK_OrganizationLeaders_StatusTypes">
+      <End Role="StatusType" EntitySet="StatusTypes" />
+      <End Role="OrganizationLeader" EntitySet="OrganizationLeaders" />
+    </AssociationSet>
+    <EntitySet Name="Sacraments" EntityType="ShepherdAidDBModel.Sacrament" />
+    <EntitySet Name="MemberSacraments" EntityType="ShepherdAidDBModel.MemberSacrament" />
+    <AssociationSet Name="FK_MemberSacraments_Institutions" Association="ShepherdAidDBModel.FK_MemberSacraments_Institutions">
+      <End Role="Institution" EntitySet="Institutions" />
+      <End Role="MemberSacrament" EntitySet="MemberSacraments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MemberSacraments_Members" Association="ShepherdAidDBModel.FK_MemberSacraments_Members">
+      <End Role="Member" EntitySet="Members" />
+      <End Role="MemberSacrament" EntitySet="MemberSacraments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MemberSacraments_Sacraments" Association="ShepherdAidDBModel.FK_MemberSacraments_Sacraments">
+      <End Role="Sacrament" EntitySet="Sacraments" />
+      <End Role="MemberSacrament" EntitySet="MemberSacraments" />
+    </AssociationSet>
+    <EntitySet Name="SacramentRequirements" EntityType="ShepherdAidDBModel.SacramentRequirement" />
+    <AssociationSet Name="FK_SacramentRequirements_Sacraments" Association="ShepherdAidDBModel.FK_SacramentRequirements_Sacraments">
+      <End Role="Sacrament" EntitySet="Sacraments" />
+      <End Role="SacramentRequirement" EntitySet="SacramentRequirements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SacramentRequirements_Sacraments1" Association="ShepherdAidDBModel.FK_SacramentRequirements_Sacraments1">
+      <End Role="Sacrament" EntitySet="Sacraments" />
+      <End Role="SacramentRequirement" EntitySet="SacramentRequirements" />
+    </AssociationSet>
+    <FunctionImport Name="FuncMemberObligations" ReturnType="Collection(ShepherdAidDBModel.FuncMemberObligations_Result)">
+      <Parameter Name="MemberID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="MemberPayments" EntityType="ShepherdAidDBModel.MemberPayment" />
+    <EntitySet Name="Payments" EntityType="ShepherdAidDBModel.Payment" />
+    <AssociationSet Name="FK_Payments_CurrencyTypes" Association="ShepherdAidDBModel.FK_Payments_CurrencyTypes">
+      <End Role="CurrencyType" EntitySet="CurrencyTypes" />
+      <End Role="Payment" EntitySet="Payments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MemberPayments_Members" Association="ShepherdAidDBModel.FK_MemberPayments_Members">
+      <End Role="Member" EntitySet="Members" />
+      <End Role="MemberPayment" EntitySet="MemberPayments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MemberPayments_Payments" Association="ShepherdAidDBModel.FK_MemberPayments_Payments">
+      <End Role="Payment" EntitySet="Payments" />
+      <End Role="MemberPayment" EntitySet="MemberPayments" />
+    </AssociationSet>
+    <FunctionImport Name="FilterMembersList" ReturnType="Collection(ShepherdAidDBModel.FilterMembersList_Result)">
+      <Parameter Name="MemberID" Mode="In" Type="String" />
+      <Parameter Name="FirstName" Mode="In" Type="String" />
+      <Parameter Name="LastName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="FuncFilterMembersList" ReturnType="Collection(ShepherdAidDBModel.FuncFilterMembersList_Result)">
+      <Parameter Name="MemberID" Mode="In" Type="String" />
+      <Parameter Name="FirstName" Mode="In" Type="String" />
+      <Parameter Name="LastName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="MemberActiveObligations" ReturnType="Collection(ShepherdAidDBModel.MemberActiveObligations_Result)">
+      <Parameter Name="MemberID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="FuncMemberActiveObligations" ReturnType="Collection(ShepherdAidDBModel.FuncMemberActiveObligations_Result)">
+      <Parameter Name="MemberID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="MemberPaymentList" ReturnType="Collection(ShepherdAidDBModel.MemberPaymentList_Result)">
+      <Parameter Name="MemberID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="FuncMemberPaymentList" ReturnType="Collection(ShepherdAidDBModel.FuncMemberPaymentList_Result)">
+      <Parameter Name="MemberID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SPMemberObligations" ReturnType="Collection(ShepherdAidDBModel.SPMemberObligations_Result)">
+      <Parameter Name="MemberID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="FuncSPMemberObligations" ReturnType="Collection(ShepherdAidDBModel.FuncSPMemberObligations_Result)">
+      <Parameter Name="MemberID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="MemberObligations" EntityType="ShepherdAidDBModel.MemberObligation" />
+    <AssociationSet Name="FK_MemberObligations_CurrencyTypes" Association="ShepherdAidDBModel.FK_MemberObligations_CurrencyTypes">
+      <End Role="CurrencyType" EntitySet="CurrencyTypes" />
+      <End Role="MemberObligation" EntitySet="MemberObligations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MemberObligations_Members" Association="ShepherdAidDBModel.FK_MemberObligations_Members">
+      <End Role="Member" EntitySet="Members" />
+      <End Role="MemberObligation" EntitySet="MemberObligations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MemberObligations_ObligationStatusTypes" Association="ShepherdAidDBModel.FK_MemberObligations_ObligationStatusTypes">
+      <End Role="ObligationStatusType" EntitySet="ObligationStatusTypes" />
+      <End Role="MemberObligation" EntitySet="MemberObligations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MemberObligations_ObligationTypes" Association="ShepherdAidDBModel.FK_MemberObligations_ObligationTypes">
+      <End Role="ObligationType" EntitySet="ObligationTypes" />
+      <End Role="MemberObligation" EntitySet="MemberObligations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MemberObligations_RecurranceTypes" Association="ShepherdAidDBModel.FK_MemberObligations_RecurranceTypes">
+      <End Role="RecurranceType" EntitySet="RecurranceTypes" />
+      <End Role="MemberObligation" EntitySet="MemberObligations" />
+    </AssociationSet>
+    <FunctionImport Name="FuncSPObligationSummary" ReturnType="Collection(ShepherdAidDBModel.FuncSPObligationSummary_Result)">
+      <Parameter Name="ObligationID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="FuncObligationSummary" ReturnType="Collection(ShepherdAidDBModel.FuncObligationSummary_Result)">
+      <Parameter Name="ObligationID" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="FuncApplicationUsers_Result">
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="128" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="256" />
+    <Property Type="String" Name="PhoneNumber" Nullable="true" />
+    <Property Type="String" Name="FirstName" Nullable="true" MaxLength="75" />
+    <Property Type="String" Name="MiddleName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="75" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" />
+    <Property Type="String" Name="ClientName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="InstitutionGroup" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="InstitutionName" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GroupAvailableRoles_Result">
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="256" />
+  </ComplexType>
+  <ComplexType Name="UserAssignedRoles_Result">
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="256" />
+  </ComplexType>
+  <ComplexType Name="UserAvailableRoles_Result">
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="256" />
+  </ComplexType>
+  <ComplexType Name="FuncGroupAvailableRoles_Result">
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="256" />
+  </ComplexType>
+  <ComplexType Name="FuncUserAssignedRoles_Result">
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="256" />
+  </ComplexType>
+  <ComplexType Name="FuncUserAvailableRoles_Result">
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="256" />
+  </ComplexType>
+  <ComplexType Name="ReportUserAssignedRoles_Result">
+    <Property Type="String" Name="Full_Name" Nullable="true" MaxLength="202" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="256" />
+  </ComplexType>
+  <ComplexType Name="FuncReportUserAssignedRoles_Result">
+    <Property Type="String" Name="Full_Name" Nullable="true" MaxLength="202" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="256" />
+  </ComplexType>
+  <ComplexType Name="ReportGroupAssignedRoles_Result">
+    <Property Type="String" Name="GroupName" Nullable="false" MaxLength="256" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="256" />
+  </ComplexType>
+  <ComplexType Name="ReportUsersAndGroups_Result">
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="202" />
+    <Property Type="String" Name="GroupName" Nullable="false" MaxLength="256" />
+  </ComplexType>
+  <ComplexType Name="FuncUsersAndGroups_Result">
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="202" />
+    <Property Type="String" Name="GroupName" Nullable="false" MaxLength="256" />
+  </ComplexType>
+  <ComplexType Name="FuncReportGroupAssignedRoles_Result">
+    <Property Type="String" Name="GroupName" Nullable="false" MaxLength="256" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="256" />
+  </ComplexType>
+  <ComplexType Name="FuncGroupAssignedRoles_Result">
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="256" />
+  </ComplexType>
+  <EntityType Name="AspNetGroup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InstitutionID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="AspNetUsers" Relationship="ShepherdAidDBModel.FK_AspNetUsers_AspNetGroups" FromRole="AspNetGroup" ToRole="AspNetUser" />
+    <NavigationProperty Name="Institution" Relationship="ShepherdAidDBModel.FK_AspNetGroups_Institutions" FromRole="AspNetGroup" ToRole="Institution" />
+  </EntityType>
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="75" FixedLength="false" Unicode="true" />
+    <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="75" FixedLength="false" Unicode="true" />
+    <Property Name="LoginHint" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserGroupID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="AspNetGroup" Relationship="ShepherdAidDBModel.FK_AspNetUsers_AspNetGroups" FromRole="AspNetUser" ToRole="AspNetGroup" />
+  </EntityType>
+  <Association Name="FK_AspNetUsers_AspNetGroups">
+    <End Type="ShepherdAidDBModel.AspNetGroup" Role="AspNetGroup" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ShepherdAidDBModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetGroup">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AspNetUser">
+        <PropertyRef Name="UserGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Initial" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="OfficePhone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MobilePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Website" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Company" Relationship="ShepherdAidDBModel.FK_Clients_Companies" FromRole="Client" ToRole="Company" />
+    <NavigationProperty Name="InstitutionGroups" Relationship="ShepherdAidDBModel.FK_InstitutionGroups_Clients" FromRole="Client" ToRole="InstitutionGroup" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Initial" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="OfficePhone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MobilePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Website" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Clients" Relationship="ShepherdAidDBModel.FK_Clients_Companies" FromRole="Company" ToRole="Client" />
+  </EntityType>
+  <EntityType Name="County">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Members" Relationship="ShepherdAidDBModel.FK_Members_Counties" FromRole="County" ToRole="Member" />
+  </EntityType>
+  <EntityType Name="GenderType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Members" Relationship="ShepherdAidDBModel.FK_Members_GenderTypes" FromRole="GenderType" ToRole="Member" />
+  </EntityType>
+  <EntityType Name="InstitutionGroup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClientID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Initial" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="OfficePhone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MobilePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Website" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Client" Relationship="ShepherdAidDBModel.FK_InstitutionGroups_Clients" FromRole="InstitutionGroup" ToRole="Client" />
+    <NavigationProperty Name="Institutions" Relationship="ShepherdAidDBModel.FK_Institutions_InstitutionGroups" FromRole="InstitutionGroup" ToRole="Institution" />
+  </EntityType>
+  <EntityType Name="Institution">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InstitutionGroupID" Type="Int32" Nullable="false" />
+    <Property Name="InstitutionName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Initial" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OfficePhone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MobilePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Website" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StatusTypeID" Type="Int32" Nullable="false" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="AspNetGroups" Relationship="ShepherdAidDBModel.FK_AspNetGroups_Institutions" FromRole="Institution" ToRole="AspNetGroup" />
+    <NavigationProperty Name="InstitutionGroup" Relationship="ShepherdAidDBModel.FK_Institutions_InstitutionGroups" FromRole="Institution" ToRole="InstitutionGroup" />
+    <NavigationProperty Name="StatusType" Relationship="ShepherdAidDBModel.FK_Institutions_StatusTypes" FromRole="Institution" ToRole="StatusType" />
+    <NavigationProperty Name="Members" Relationship="ShepherdAidDBModel.FK_Members_Institutions" FromRole="Institution" ToRole="Member" />
+    <NavigationProperty Name="MemberTypes" Relationship="ShepherdAidDBModel.FK_MemberTypes_Institutions" FromRole="Institution" ToRole="MemberType" />
+    <NavigationProperty Name="SalutationTypes" Relationship="ShepherdAidDBModel.FK_SalutationTypes_Institutions" FromRole="Institution" ToRole="SalutationType" />
+    <NavigationProperty Name="ObligationTypes" Relationship="ShepherdAidDBModel.FK_ObligationTypes_Institutions" FromRole="Institution" ToRole="ObligationType" />
+    <NavigationProperty Name="OrganizationPositionTypes" Relationship="ShepherdAidDBModel.FK_OrganizationPositionTypes_Institutions" FromRole="Institution" ToRole="OrganizationPositionType" />
+    <NavigationProperty Name="Organizations" Relationship="ShepherdAidDBModel.FK_Organizations_Institutions" FromRole="Institution" ToRole="Organization" />
+    <NavigationProperty Name="MemberSacraments" Relationship="ShepherdAidDBModel.FK_MemberSacraments_Institutions" FromRole="Institution" ToRole="MemberSacrament" />
+  </EntityType>
+  <EntityType Name="MaritalStatusType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Members" Relationship="ShepherdAidDBModel.FK_Members_MaritalStatusTypes" FromRole="MaritalStatusType" ToRole="Member" />
+  </EntityType>
+  <EntityType Name="Member">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InstitutionID" Type="Int32" Nullable="false" />
+    <Property Name="MemberID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="SalutationTypeID" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GenderTypeID" Type="Int32" Nullable="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MaritalStatusTypeID" Type="Int32" Nullable="false" />
+    <Property Name="ResidentAddress" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="EmailAddress" Type="String" MaxLength="75" FixedLength="false" Unicode="true" />
+    <Property Name="MobilePhone" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="OfficePhone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="NationalityTypeID" Type="Int32" Nullable="false" />
+    <Property Name="CountyID" Type="Int32" />
+    <Property Name="Region" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MemberTypeID" Type="Int32" Nullable="false" />
+    <Property Name="StatusTypeID" Type="Int32" Nullable="false" />
+    <Property Name="PhotoPath" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="UserID" Type="String" MaxLength="1280" FixedLength="false" Unicode="true" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="County" Relationship="ShepherdAidDBModel.FK_Members_Counties" FromRole="Member" ToRole="County" />
+    <NavigationProperty Name="GenderType" Relationship="ShepherdAidDBModel.FK_Members_GenderTypes" FromRole="Member" ToRole="GenderType" />
+    <NavigationProperty Name="Institution" Relationship="ShepherdAidDBModel.FK_Members_Institutions" FromRole="Member" ToRole="Institution" />
+    <NavigationProperty Name="MaritalStatusType" Relationship="ShepherdAidDBModel.FK_Members_MaritalStatusTypes" FromRole="Member" ToRole="MaritalStatusType" />
+    <NavigationProperty Name="MemberType" Relationship="ShepherdAidDBModel.FK_Members_MemberTypes" FromRole="Member" ToRole="MemberType" />
+    <NavigationProperty Name="NationalityType" Relationship="ShepherdAidDBModel.FK_Members_NationalityTypes" FromRole="Member" ToRole="NationalityType" />
+    <NavigationProperty Name="SalutationType" Relationship="ShepherdAidDBModel.FK_Members_SalutationTypes" FromRole="Member" ToRole="SalutationType" />
+    <NavigationProperty Name="StatusType" Relationship="ShepherdAidDBModel.FK_Members_StatusTypes" FromRole="Member" ToRole="StatusType" />
+    <NavigationProperty Name="OrganizationMembers" Relationship="ShepherdAidDBModel.FK_OrganizationMembers_Members" FromRole="Member" ToRole="OrganizationMember" />
+    <NavigationProperty Name="MemberDocuments" Relationship="ShepherdAidDBModel.FK_MemberDocuments_Members" FromRole="Member" ToRole="MemberDocument" />
+    <NavigationProperty Name="MemberPhotos" Relationship="ShepherdAidDBModel.FK_MemberPhotos_Members" FromRole="Member" ToRole="MemberPhoto" />
+    <NavigationProperty Name="OrganizationLeaders" Relationship="ShepherdAidDBModel.FK_OrganizationLeaders_Members" FromRole="Member" ToRole="OrganizationLeader" />
+    <NavigationProperty Name="MemberSacraments" Relationship="ShepherdAidDBModel.FK_MemberSacraments_Members" FromRole="Member" ToRole="MemberSacrament" />
+    <NavigationProperty Name="MemberPayments" Relationship="ShepherdAidDBModel.FK_MemberPayments_Members" FromRole="Member" ToRole="MemberPayment" />
+    <NavigationProperty Name="MemberObligations" Relationship="ShepherdAidDBModel.FK_MemberObligations_Members" FromRole="Member" ToRole="MemberObligation" />
+  </EntityType>
+  <EntityType Name="MemberType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="InstitutionID" Type="Int32" />
+    <NavigationProperty Name="Institution" Relationship="ShepherdAidDBModel.FK_MemberTypes_Institutions" FromRole="MemberType" ToRole="Institution" />
+    <NavigationProperty Name="Members" Relationship="ShepherdAidDBModel.FK_Members_MemberTypes" FromRole="MemberType" ToRole="Member" />
+  </EntityType>
+  <EntityType Name="NationalityType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="Value" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Members" Relationship="ShepherdAidDBModel.FK_Members_NationalityTypes" FromRole="NationalityType" ToRole="Member" />
+  </EntityType>
+  <EntityType Name="OrganizationGenderType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Organizations" Relationship="ShepherdAidDBModel.FK_Organizations_OrganizationGenderTypes" FromRole="OrganizationGenderType" ToRole="Organization" />
+  </EntityType>
+  <EntityType Name="OrganizationMember">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrganizationID" Type="Int32" Nullable="false" />
+    <Property Name="MemberID" Type="Int32" Nullable="false" />
+    <Property Name="MembershipDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="StatusID" Type="Int32" Nullable="false" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Member" Relationship="ShepherdAidDBModel.FK_OrganizationMembers_Members" FromRole="OrganizationMember" ToRole="Member" />
+    <NavigationProperty Name="StatusType" Relationship="ShepherdAidDBModel.FK_OrganizationMembers_StatusTypes" FromRole="OrganizationMember" ToRole="StatusType" />
+    <NavigationProperty Name="Organization" Relationship="ShepherdAidDBModel.FK_OrganizationMembers_Organizations" FromRole="OrganizationMember" ToRole="Organization" />
+  </EntityType>
+  <EntityType Name="OrganizationStatusType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Organizations" Relationship="ShepherdAidDBModel.FK_Organizations_OrganizationStatusTypes" FromRole="OrganizationStatusType" ToRole="Organization" />
+  </EntityType>
+  <EntityType Name="PositionType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrgranizationID" Type="Int32" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Priority" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="SalutationType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="InstitutionID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Institution" Relationship="ShepherdAidDBModel.FK_SalutationTypes_Institutions" FromRole="SalutationType" ToRole="Institution" />
+    <NavigationProperty Name="Members" Relationship="ShepherdAidDBModel.FK_Members_SalutationTypes" FromRole="SalutationType" ToRole="Member" />
+  </EntityType>
+  <EntityType Name="StatusType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StatusName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Institutions" Relationship="ShepherdAidDBModel.FK_Institutions_StatusTypes" FromRole="StatusType" ToRole="Institution" />
+    <NavigationProperty Name="Members" Relationship="ShepherdAidDBModel.FK_Members_StatusTypes" FromRole="StatusType" ToRole="Member" />
+    <NavigationProperty Name="OrganizationMembers" Relationship="ShepherdAidDBModel.FK_OrganizationMembers_StatusTypes" FromRole="StatusType" ToRole="OrganizationMember" />
+    <NavigationProperty Name="OrganizationLeaders" Relationship="ShepherdAidDBModel.FK_OrganizationLeaders_StatusTypes" FromRole="StatusType" ToRole="OrganizationLeader" />
+  </EntityType>
+  <Association Name="FK_AspNetGroups_Institutions">
+    <End Type="ShepherdAidDBModel.Institution" Role="Institution" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ShepherdAidDBModel.AspNetGroup" Role="AspNetGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institution">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AspNetGroup">
+        <PropertyRef Name="InstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clients_Companies">
+    <End Type="ShepherdAidDBModel.Company" Role="Company" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ShepherdAidDBModel.Client" Role="Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="CompanyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InstitutionGroups_Clients">
+    <End Type="ShepherdAidDBModel.Client" Role="Client" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ShepherdAidDBModel.InstitutionGroup" Role="InstitutionGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="InstitutionGroup">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Members_Counties">
+    <End Type="ShepherdAidDBModel.County" Role="County" Multiplicity="0..1" />
+    <End Type="ShepherdAidDBModel.Member" Role="Member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="County">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Member">
+        <PropertyRef Name="CountyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Members_GenderTypes">
+    <End Type="ShepherdAidDBModel.GenderType" Role="GenderType" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.Member" Role="Member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GenderType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Member">
+        <PropertyRef Name="GenderTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Institutions_InstitutionGroups">
+    <End Type="ShepherdAidDBModel.InstitutionGroup" Role="InstitutionGroup" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ShepherdAidDBModel.Institution" Role="Institution" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InstitutionGroup">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Institution">
+        <PropertyRef Name="InstitutionGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Institutions_StatusTypes">
+    <End Type="ShepherdAidDBModel.StatusType" Role="StatusType" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.Institution" Role="Institution" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Institution">
+        <PropertyRef Name="StatusTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Members_Institutions">
+    <End Type="ShepherdAidDBModel.Institution" Role="Institution" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.Member" Role="Member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institution">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Member">
+        <PropertyRef Name="InstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MemberTypes_Institutions">
+    <End Type="ShepherdAidDBModel.Institution" Role="Institution" Multiplicity="0..1" />
+    <End Type="ShepherdAidDBModel.MemberType" Role="MemberType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institution">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MemberType">
+        <PropertyRef Name="InstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalutationTypes_Institutions">
+    <End Type="ShepherdAidDBModel.Institution" Role="Institution" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.SalutationType" Role="SalutationType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institution">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SalutationType">
+        <PropertyRef Name="InstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Members_MaritalStatusTypes">
+    <End Type="ShepherdAidDBModel.MaritalStatusType" Role="MaritalStatusType" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.Member" Role="Member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MaritalStatusType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Member">
+        <PropertyRef Name="MaritalStatusTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Members_MemberTypes">
+    <End Type="ShepherdAidDBModel.MemberType" Role="MemberType" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.Member" Role="Member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MemberType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Member">
+        <PropertyRef Name="MemberTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Members_NationalityTypes">
+    <End Type="ShepherdAidDBModel.NationalityType" Role="NationalityType" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.Member" Role="Member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NationalityType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Member">
+        <PropertyRef Name="NationalityTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Members_SalutationTypes">
+    <End Type="ShepherdAidDBModel.SalutationType" Role="SalutationType" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.Member" Role="Member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalutationType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Member">
+        <PropertyRef Name="SalutationTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Members_StatusTypes">
+    <End Type="ShepherdAidDBModel.StatusType" Role="StatusType" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.Member" Role="Member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Member">
+        <PropertyRef Name="StatusTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrganizationMembers_Members">
+    <End Type="ShepherdAidDBModel.Member" Role="Member" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ShepherdAidDBModel.OrganizationMember" Role="OrganizationMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OrganizationMember">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrganizationMembers_StatusTypes">
+    <End Type="ShepherdAidDBModel.StatusType" Role="StatusType" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.OrganizationMember" Role="OrganizationMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OrganizationMember">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="SystemVariable">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Value" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Tracker">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IpAddress" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AreaAccessed" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ActionDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PreviousValues" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ObligationStatusType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StatusName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="MemberObligations" Relationship="ShepherdAidDBModel.FK_MemberObligations_ObligationStatusTypes" FromRole="ObligationStatusType" ToRole="MemberObligation" />
+  </EntityType>
+  <EntityType Name="ObligationType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ObligationName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="InstitutionID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Institution" Relationship="ShepherdAidDBModel.FK_ObligationTypes_Institutions" FromRole="ObligationType" ToRole="Institution" />
+    <NavigationProperty Name="MemberObligations" Relationship="ShepherdAidDBModel.FK_MemberObligations_ObligationTypes" FromRole="ObligationType" ToRole="MemberObligation" />
+  </EntityType>
+  <EntityType Name="RecurranceType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Recurrance" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="MemberObligations" Relationship="ShepherdAidDBModel.FK_MemberObligations_RecurranceTypes" FromRole="RecurranceType" ToRole="MemberObligation" />
+  </EntityType>
+  <Association Name="FK_ObligationTypes_Institutions">
+    <End Type="ShepherdAidDBModel.Institution" Role="Institution" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.ObligationType" Role="ObligationType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institution">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ObligationType">
+        <PropertyRef Name="InstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CurrencyType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CurrencyName" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="ShortName" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Payments" Relationship="ShepherdAidDBModel.FK_Payments_CurrencyTypes" FromRole="CurrencyType" ToRole="Payment" />
+    <NavigationProperty Name="MemberObligations" Relationship="ShepherdAidDBModel.FK_MemberObligations_CurrencyTypes" FromRole="CurrencyType" ToRole="MemberObligation" />
+  </EntityType>
+  <EntityType Name="DocumentType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="MemberDocuments" Relationship="ShepherdAidDBModel.FK_MemberDocuments_DocumentTypes" FromRole="DocumentType" ToRole="MemberDocument" />
+  </EntityType>
+  <EntityType Name="MemberDocument">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MemberID" Type="Int32" Nullable="false" />
+    <Property Name="DocumentTypeID" Type="Int32" Nullable="false" />
+    <Property Name="DocumentPath" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="DocumentType" Relationship="ShepherdAidDBModel.FK_MemberDocuments_DocumentTypes" FromRole="MemberDocument" ToRole="DocumentType" />
+    <NavigationProperty Name="Member" Relationship="ShepherdAidDBModel.FK_MemberDocuments_Members" FromRole="MemberDocument" ToRole="Member" />
+  </EntityType>
+  <Association Name="FK_MemberDocuments_DocumentTypes">
+    <End Type="ShepherdAidDBModel.DocumentType" Role="DocumentType" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.MemberDocument" Role="MemberDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MemberDocument">
+        <PropertyRef Name="DocumentTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MemberDocuments_Members">
+    <End Type="ShepherdAidDBModel.Member" Role="Member" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.MemberDocument" Role="MemberDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MemberDocument">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="AspNetRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="FuncGetDefaultInstitutionGroupCount_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="Organization">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InstitutionID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ShortName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateEstablished" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Purpose" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="OfficePhone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="MobilePhone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="75" FixedLength="false" Unicode="true" />
+    <Property Name="Website" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrganizationGenderTypeID" Type="Int32" Nullable="false" />
+    <Property Name="OrganizationStatusTypeID" Type="Int32" Nullable="false" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="OrganizationGenderType" Relationship="ShepherdAidDBModel.FK_Organizations_OrganizationGenderTypes" FromRole="Organization" ToRole="OrganizationGenderType" />
+    <NavigationProperty Name="OrganizationMembers" Relationship="ShepherdAidDBModel.FK_OrganizationMembers_Organizations" FromRole="Organization" ToRole="OrganizationMember" />
+    <NavigationProperty Name="OrganizationStatusType" Relationship="ShepherdAidDBModel.FK_Organizations_OrganizationStatusTypes" FromRole="Organization" ToRole="OrganizationStatusType" />
+    <NavigationProperty Name="OrganizationPositionTypes" Relationship="ShepherdAidDBModel.FK_OrganizationPositionTypes_Organizations" FromRole="Organization" ToRole="OrganizationPositionType" />
+    <NavigationProperty Name="Institution" Relationship="ShepherdAidDBModel.FK_Organizations_Institutions" FromRole="Organization" ToRole="Institution" />
+    <NavigationProperty Name="OrganizationLeaders" Relationship="ShepherdAidDBModel.FK_OrganizationLeaders_Organizations" FromRole="Organization" ToRole="OrganizationLeader" />
+  </EntityType>
+  <Association Name="FK_Organizations_OrganizationGenderTypes">
+    <End Type="ShepherdAidDBModel.OrganizationGenderType" Role="OrganizationGenderType" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.Organization" Role="Organization" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrganizationGenderType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Organization">
+        <PropertyRef Name="OrganizationGenderTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrganizationMembers_Organizations">
+    <End Type="ShepherdAidDBModel.Organization" Role="Organization" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.OrganizationMember" Role="OrganizationMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Organization">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OrganizationMember">
+        <PropertyRef Name="OrganizationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Organizations_OrganizationStatusTypes">
+    <End Type="ShepherdAidDBModel.OrganizationStatusType" Role="OrganizationStatusType" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.Organization" Role="Organization" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrganizationStatusType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Organization">
+        <PropertyRef Name="OrganizationStatusTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="OrganizationNonMembers_Result">
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="152" />
+    <Property Type="String" Name="Gender" Nullable="false" MaxLength="32" />
+    <Property Type="String" Name="MemberID" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="FuncOrganizationNonMembers_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="152" />
+    <Property Type="String" Name="Gender" Nullable="false" MaxLength="32" />
+    <Property Type="String" Name="MemberID" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="OrganizationLeaderMembers_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="152" />
+    <Property Type="String" Name="Gender" Nullable="false" MaxLength="32" />
+    <Property Type="String" Name="MemberID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Status" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="FuncOrganizationLeaderMembers_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="152" />
+    <Property Type="String" Name="Gender" Nullable="false" MaxLength="32" />
+    <Property Type="String" Name="MemberID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Status" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="MemberPhoto">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MemberID" Type="Int32" Nullable="false" />
+    <Property Name="DocumentPath" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Member" Relationship="ShepherdAidDBModel.FK_MemberPhotos_Members" FromRole="MemberPhoto" ToRole="Member" />
+  </EntityType>
+  <Association Name="FK_MemberPhotos_Members">
+    <End Type="ShepherdAidDBModel.Member" Role="Member" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.MemberPhoto" Role="MemberPhoto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MemberPhoto">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="OrganizationPositionType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InstitutionID" Type="Int32" Nullable="false" />
+    <Property Name="OrgranizationID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Priority" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Institution" Relationship="ShepherdAidDBModel.FK_OrganizationPositionTypes_Institutions" FromRole="OrganizationPositionType" ToRole="Institution" />
+    <NavigationProperty Name="Organization" Relationship="ShepherdAidDBModel.FK_OrganizationPositionTypes_Organizations" FromRole="OrganizationPositionType" ToRole="Organization" />
+    <NavigationProperty Name="OrganizationLeaders" Relationship="ShepherdAidDBModel.FK_OrganizationLeaders_PositionTypes" FromRole="OrganizationPositionType" ToRole="OrganizationLeader" />
+  </EntityType>
+  <Association Name="FK_OrganizationPositionTypes_Institutions">
+    <End Type="ShepherdAidDBModel.Institution" Role="Institution" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ShepherdAidDBModel.OrganizationPositionType" Role="OrganizationPositionType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institution">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OrganizationPositionType">
+        <PropertyRef Name="InstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrganizationPositionTypes_Organizations">
+    <End Type="ShepherdAidDBModel.Organization" Role="Organization" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ShepherdAidDBModel.OrganizationPositionType" Role="OrganizationPositionType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Organization">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OrganizationPositionType">
+        <PropertyRef Name="OrgranizationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="OrganizationLeader">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrganizationID" Type="Int32" Nullable="false" />
+    <Property Name="MemberID" Type="Int32" Nullable="false" />
+    <Property Name="OrganizationPositionTypeID" Type="Int32" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Precision="0" />
+    <Property Name="StatusID" Type="Int32" Nullable="false" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Member" Relationship="ShepherdAidDBModel.FK_OrganizationLeaders_Members" FromRole="OrganizationLeader" ToRole="Member" />
+    <NavigationProperty Name="Organization" Relationship="ShepherdAidDBModel.FK_OrganizationLeaders_Organizations" FromRole="OrganizationLeader" ToRole="Organization" />
+    <NavigationProperty Name="OrganizationPositionType" Relationship="ShepherdAidDBModel.FK_OrganizationLeaders_PositionTypes" FromRole="OrganizationLeader" ToRole="OrganizationPositionType" />
+    <NavigationProperty Name="StatusType" Relationship="ShepherdAidDBModel.FK_OrganizationLeaders_StatusTypes" FromRole="OrganizationLeader" ToRole="StatusType" />
+  </EntityType>
+  <Association Name="FK_Organizations_Institutions">
+    <End Type="ShepherdAidDBModel.Institution" Role="Institution" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.Organization" Role="Organization" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institution">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Organization">
+        <PropertyRef Name="InstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrganizationLeaders_Members">
+    <End Type="ShepherdAidDBModel.Member" Role="Member" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ShepherdAidDBModel.OrganizationLeader" Role="OrganizationLeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OrganizationLeader">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrganizationLeaders_Organizations">
+    <End Type="ShepherdAidDBModel.Organization" Role="Organization" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ShepherdAidDBModel.OrganizationLeader" Role="OrganizationLeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Organization">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OrganizationLeader">
+        <PropertyRef Name="OrganizationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrganizationLeaders_PositionTypes">
+    <End Type="ShepherdAidDBModel.OrganizationPositionType" Role="OrganizationPositionType" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.OrganizationLeader" Role="OrganizationLeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrganizationPositionType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OrganizationLeader">
+        <PropertyRef Name="OrganizationPositionTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrganizationLeaders_StatusTypes">
+    <End Type="ShepherdAidDBModel.StatusType" Role="StatusType" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.OrganizationLeader" Role="OrganizationLeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OrganizationLeader">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Sacrament">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="MemberSacraments" Relationship="ShepherdAidDBModel.FK_MemberSacraments_Sacraments" FromRole="Sacrament" ToRole="MemberSacrament" />
+    <NavigationProperty Name="SacramentRequirements" Relationship="ShepherdAidDBModel.FK_SacramentRequirements_Sacraments" FromRole="Sacrament" ToRole="SacramentRequirement" />
+    <NavigationProperty Name="SacramentRequirements1" Relationship="ShepherdAidDBModel.FK_SacramentRequirements_Sacraments1" FromRole="Sacrament" ToRole="SacramentRequirement" />
+  </EntityType>
+  <EntityType Name="MemberSacrament">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MemberID" Type="Int32" Nullable="false" />
+    <Property Name="SacramentID" Type="Int32" Nullable="false" />
+    <Property Name="AdministeredBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InstitutionID" Type="Int32" Nullable="false" />
+    <Property Name="DateAdministered" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Institution" Relationship="ShepherdAidDBModel.FK_MemberSacraments_Institutions" FromRole="MemberSacrament" ToRole="Institution" />
+    <NavigationProperty Name="Member" Relationship="ShepherdAidDBModel.FK_MemberSacraments_Members" FromRole="MemberSacrament" ToRole="Member" />
+    <NavigationProperty Name="Sacrament" Relationship="ShepherdAidDBModel.FK_MemberSacraments_Sacraments" FromRole="MemberSacrament" ToRole="Sacrament" />
+  </EntityType>
+  <Association Name="FK_MemberSacraments_Institutions">
+    <End Type="ShepherdAidDBModel.Institution" Role="Institution" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ShepherdAidDBModel.MemberSacrament" Role="MemberSacrament" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Institution">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MemberSacrament">
+        <PropertyRef Name="InstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MemberSacraments_Members">
+    <End Type="ShepherdAidDBModel.Member" Role="Member" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ShepherdAidDBModel.MemberSacrament" Role="MemberSacrament" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MemberSacrament">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MemberSacraments_Sacraments">
+    <End Type="ShepherdAidDBModel.Sacrament" Role="Sacrament" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ShepherdAidDBModel.MemberSacrament" Role="MemberSacrament" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sacrament">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MemberSacrament">
+        <PropertyRef Name="SacramentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="SacramentRequirement">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SacramentID" Type="Int32" Nullable="false" />
+    <Property Name="RequirementID" Type="Int32" Nullable="false" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Sacrament" Relationship="ShepherdAidDBModel.FK_SacramentRequirements_Sacraments" FromRole="SacramentRequirement" ToRole="Sacrament" />
+    <NavigationProperty Name="Sacrament1" Relationship="ShepherdAidDBModel.FK_SacramentRequirements_Sacraments1" FromRole="SacramentRequirement" ToRole="Sacrament" />
+  </EntityType>
+  <Association Name="FK_SacramentRequirements_Sacraments">
+    <End Type="ShepherdAidDBModel.Sacrament" Role="Sacrament" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ShepherdAidDBModel.SacramentRequirement" Role="SacramentRequirement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sacrament">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SacramentRequirement">
+        <PropertyRef Name="SacramentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SacramentRequirements_Sacraments1">
+    <End Type="ShepherdAidDBModel.Sacrament" Role="Sacrament" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.SacramentRequirement" Role="SacramentRequirement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sacrament">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SacramentRequirement">
+        <PropertyRef Name="RequirementID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="FuncMemberObligations_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Obligation" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="Amount" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="String" Name="Currency" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="Started" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Frequency" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="Balance" Nullable="true" Precision="19" />
+  </ComplexType>
+  <EntityType Name="MemberPayment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MemberID" Type="Int32" Nullable="false" />
+    <Property Name="PaymentID" Type="Int32" Nullable="false" />
+    <Property Name="MemberObligationID" Type="Int32" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Member" Relationship="ShepherdAidDBModel.FK_MemberPayments_Members" FromRole="MemberPayment" ToRole="Member" />
+    <NavigationProperty Name="Payment" Relationship="ShepherdAidDBModel.FK_MemberPayments_Payments" FromRole="MemberPayment" ToRole="Payment" />
+  </EntityType>
+  <EntityType Name="Payment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CurrencyTypeID" Type="Int32" Nullable="false" />
+    <Property Name="AmountPaid" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="CurrencyType" Relationship="ShepherdAidDBModel.FK_Payments_CurrencyTypes" FromRole="Payment" ToRole="CurrencyType" />
+    <NavigationProperty Name="MemberPayments" Relationship="ShepherdAidDBModel.FK_MemberPayments_Payments" FromRole="Payment" ToRole="MemberPayment" />
+    <Property Name="PaymentDate" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <Association Name="FK_Payments_CurrencyTypes">
+    <End Type="ShepherdAidDBModel.CurrencyType" Role="CurrencyType" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.Payment" Role="Payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CurrencyType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Payment">
+        <PropertyRef Name="CurrencyTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MemberPayments_Members">
+    <End Type="ShepherdAidDBModel.Member" Role="Member" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ShepherdAidDBModel.MemberPayment" Role="MemberPayment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MemberPayment">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MemberPayments_Payments">
+    <End Type="ShepherdAidDBModel.Payment" Role="Payment" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ShepherdAidDBModel.MemberPayment" Role="MemberPayment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Payment">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MemberPayment">
+        <PropertyRef Name="PaymentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="FilterMembersList_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="MemberID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="MiddleName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="EmailAddress" Nullable="true" MaxLength="75" />
+    <Property Type="String" Name="MobilePhone" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="OfficePhone" Nullable="true" MaxLength="15" />
+    <Property Type="Int32" Name="GenderID" Nullable="false" />
+    <Property Type="String" Name="Gender" Nullable="false" MaxLength="32" />
+    <Property Type="Int32" Name="StatusID" Nullable="false" />
+    <Property Type="String" Name="Status" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="FuncFilterMembersList_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="MemberID" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="MiddleName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="EmailAddress" Nullable="true" MaxLength="75" />
+    <Property Type="String" Name="MobilePhone" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="OfficePhone" Nullable="true" MaxLength="15" />
+    <Property Type="Int32" Name="GenderID" Nullable="false" />
+    <Property Type="String" Name="Gender" Nullable="false" MaxLength="32" />
+    <Property Type="Int32" Name="StatusID" Nullable="false" />
+    <Property Type="String" Name="Status" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="MemberActiveObligations_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="MemberID" Nullable="false" />
+    <Property Type="String" Name="Obligation" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="Amount" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="String" Name="Currency" Nullable="false" MaxLength="25" />
+    <Property Type="Int32" Name="RecurrenceID" Nullable="false" />
+    <Property Type="String" Name="Recurrance" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="DateStarted" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="DateAdjusted" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Duration" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="Balance" Nullable="true" Precision="19" />
+    <Property Type="Int32" Name="StatusID" Nullable="false" />
+    <Property Type="String" Name="Status" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="152" />
+  </ComplexType>
+  <ComplexType Name="FuncMemberActiveObligations_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="MemberID" Nullable="false" />
+    <Property Type="String" Name="Obligation" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="Amount" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="String" Name="Currency" Nullable="false" MaxLength="25" />
+    <Property Type="Int32" Name="RecurrenceID" Nullable="false" />
+    <Property Type="String" Name="Recurrance" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="DateStarted" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="DateAdjusted" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Duration" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="Balance" Nullable="true" Precision="19" />
+    <Property Type="Int32" Name="StatusID" Nullable="false" />
+    <Property Type="String" Name="Status" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="152" />
+  </ComplexType>
+  <ComplexType Name="MemberPaymentList_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="MemberID" Nullable="false" />
+    <Property Type="String" Name="Obligation" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Amount" Nullable="true" MaxLength="40" />
+    <Property Type="Int32" Name="RecurrenceID" Nullable="false" />
+    <Property Type="String" Name="Recurrance" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="DateStarted" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="AccumAmount" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="TotalPayment" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="152" />
+  </ComplexType>
+  <ComplexType Name="FuncMemberPaymentList_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="MemberID" Nullable="false" />
+    <Property Type="String" Name="Obligation" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Amount" Nullable="true" MaxLength="40" />
+    <Property Type="Int32" Name="RecurrenceID" Nullable="false" />
+    <Property Type="String" Name="Recurrance" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="DateStarted" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="AccumAmount" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="TotalPayment" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="152" />
+  </ComplexType>
+  <ComplexType Name="SPMemberObligations_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Obligation" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="Amount" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="String" Name="Currency" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Started" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Frequency" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="Balance" Nullable="true" Precision="19" />
+  </ComplexType>
+  <ComplexType Name="FuncSPMemberObligations_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Obligation" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="Amount" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="String" Name="Currency" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Started" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Frequency" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="Balance" Nullable="true" Precision="19" />
+  </ComplexType>
+  <EntityType Name="MemberObligation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MemberID" Type="Int32" Nullable="false" />
+    <Property Name="ObligationTypeID" Type="Int32" Nullable="false" />
+    <Property Name="CurrencyTypeID" Type="Int32" Nullable="false" />
+    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="DateStarted" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateAdjusted" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AdjustedBalance" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="RecurranceTypeID" Type="Int32" Nullable="false" />
+    <Property Name="ObligationStatusTypeID" Type="Int32" Nullable="false" />
+    <Property Name="RecordedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRecorded" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="CurrencyType" Relationship="ShepherdAidDBModel.FK_MemberObligations_CurrencyTypes" FromRole="MemberObligation" ToRole="CurrencyType" />
+    <NavigationProperty Name="Member" Relationship="ShepherdAidDBModel.FK_MemberObligations_Members" FromRole="MemberObligation" ToRole="Member" />
+    <NavigationProperty Name="ObligationStatusType" Relationship="ShepherdAidDBModel.FK_MemberObligations_ObligationStatusTypes" FromRole="MemberObligation" ToRole="ObligationStatusType" />
+    <NavigationProperty Name="ObligationType" Relationship="ShepherdAidDBModel.FK_MemberObligations_ObligationTypes" FromRole="MemberObligation" ToRole="ObligationType" />
+    <NavigationProperty Name="RecurranceType" Relationship="ShepherdAidDBModel.FK_MemberObligations_RecurranceTypes" FromRole="MemberObligation" ToRole="RecurranceType" />
+  </EntityType>
+  <Association Name="FK_MemberObligations_CurrencyTypes">
+    <End Type="ShepherdAidDBModel.CurrencyType" Role="CurrencyType" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.MemberObligation" Role="MemberObligation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CurrencyType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MemberObligation">
+        <PropertyRef Name="CurrencyTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MemberObligations_Members">
+    <End Type="ShepherdAidDBModel.Member" Role="Member" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.MemberObligation" Role="MemberObligation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MemberObligation">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MemberObligations_ObligationStatusTypes">
+    <End Type="ShepherdAidDBModel.ObligationStatusType" Role="ObligationStatusType" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.MemberObligation" Role="MemberObligation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ObligationStatusType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MemberObligation">
+        <PropertyRef Name="ObligationStatusTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MemberObligations_ObligationTypes">
+    <End Type="ShepherdAidDBModel.ObligationType" Role="ObligationType" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.MemberObligation" Role="MemberObligation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ObligationType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MemberObligation">
+        <PropertyRef Name="ObligationTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MemberObligations_RecurranceTypes">
+    <End Type="ShepherdAidDBModel.RecurranceType" Role="RecurranceType" Multiplicity="1" />
+    <End Type="ShepherdAidDBModel.MemberObligation" Role="MemberObligation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RecurranceType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MemberObligation">
+        <PropertyRef Name="RecurranceTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="SPObligationSummary_Result">
+    <Property Type="Decimal" Name="AccumulatedAmount" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="TotalPayment" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="CurrentBalance" Nullable="true" Precision="19" />
+    <Property Type="String" Name="Currency" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="FuncObligationSummary_Result">
+    <Property Type="Decimal" Name="AccumulatedAmount" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="TotalPayment" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="CurrentBalance" Nullable="true" Precision="19" />
+    <Property Type="String" Name="Currency" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="FuncSPObligationSummary_Result">
+    <Property Type="Decimal" Name="AccumulatedAmount" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="TotalPayment" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="CurrentBalance" Nullable="true" Precision="19" />
+    <Property Type="String" Name="Currency" Nullable="false" MaxLength="10" />
+  </ComplexType>
+</Schema>

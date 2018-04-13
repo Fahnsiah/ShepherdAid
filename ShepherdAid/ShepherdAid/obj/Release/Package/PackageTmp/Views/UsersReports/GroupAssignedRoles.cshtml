@@ -1,0 +1,50 @@
+﻿@model IEnumerable<ShepherdAid.Models.FuncReportGroupAssignedRoles_Result>
+@{
+    ViewBag.Title = "UserAssignedRoles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+
+    @*report links pane*@
+    <div class="col-md-2">
+        @{Html.RenderAction("ReportLinks", "Reports");}
+    </div> @*report links pane*@
+
+
+    @*report content pane*@
+    <div class="col-md-4">
+
+        <div class="mybreadcrumb">
+            @Html.ActionLink("Reports", "Index", "Reports")>>
+            @Html.ActionLink("Group List", "Groups", "UsersReports") >>
+            Assigned Roles
+        </div>
+
+        <p class="text-right">
+            @Html.ActionLink(" ", "", new { }, new { @class = "glyphicon glyphicon-print" })
+        </p>
+        @if (Model != null && Model.Count() > 0)
+        {
+            <table class="table table-striped table-bordered">
+                <tr>
+                    <th>
+                        @Model.FirstOrDefault().GroupName  Assigned Roles
+                    </th>
+
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        }
+    </div> @*report content pane*@
+
+
+</div>

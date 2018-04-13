@@ -1,0 +1,32 @@
+﻿@if (Request.IsAuthenticated)
+{
+    <div class="navbar-collapse collapse pull-report-left">
+
+        <div class="report">
+            <a href="#"><div id="div-national-reports" class="heading">NATIONAL REPORTS</div></a>
+            <ul id="ul-national-reports" class="hidden">
+                <li><a href="~/UsersReports/Index">User Assigned Roles</a></li>
+                <li><a href="~/UsersReports/UsersAndGroups">Users and Groups</a></li>
+                <li><a href="~/UsersReports/Groups">Group Assigned Roles</a></li>
+            </ul>
+        </div>
+
+        <div class="report">
+            <a href="#"><div id="div-diocesan-reports" class="heading">DIOCESAN REPORTS</div></a>
+            <ul id="ul-diocesan-reports" class="hidden">
+                <li><a href="~/UsersReports/Index">User Assigned Roles</a></li>
+                <li><a href="~/UsersReports/UsersAndGroups">Users and Groups</a></li>
+                <li><a href="~/UsersReports/Groups">Group Assigned Roles</a></li>
+            </ul>
+        </div>
+
+        <div class="report">
+            <a href="#">
+                <div id="div-parish-reports" class="heading">PARISH REPORTS</div>
+            </a>
+            <ul id="ul-parish-reports" class="hidden">
+                <li><a href="~/UsersReports/Index">Member List</a></li>
+            </ul>
+        </div>
+    </div>
+}

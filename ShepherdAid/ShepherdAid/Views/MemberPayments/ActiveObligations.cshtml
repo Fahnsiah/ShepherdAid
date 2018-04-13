@@ -1,0 +1,91 @@
+﻿@model IEnumerable<ShepherdAid.Models.spMemberActiveObligations_Result>
+
+@{
+    ViewBag.Title = "ActiveObligations";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    string title = string.Empty;
+
+    if (Model.Count().Equals(1))
+    {
+        title = string.Format("CURRENT OBLIGATION FOR {0}", ViewBag.FullName);
+    }
+    else if (Model.Count() > 1)
+    {
+        title = string.Format("CURRENT OBLIGATIONS FOR {0}", ViewBag.FullName);
+    }
+    else
+    {
+        title = string.Format("NO OBLIGATION FOR {0}", ViewBag.FullName);
+    }
+}
+
+<div class="mybreadcrumb">
+    @Html.ActionLink("Paments", "Index", "Payments") >>
+    Member Obligations
+</div>
+
+<fieldset>
+    <legend>@title</legend>
+
+    <div class="col-md-8">
+
+        @if (Model != null && Model.Count() > 0)
+        {
+
+            <table class="table table-responsive table-striped table-bordered">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Obligation)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Amount)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Recurrance)
+                    </th>
+                    <th>
+                        @Html.DisplayName("Date Started")
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Balance)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Status)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Obligation)
+                </td>
+                <td>
+
+                    @string.Format("{0}{1}", item.Currency, item.Amount.ToString("#,###.00"))
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Recurrance)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateStarted)
+                </td>
+                <td>
+                    @string.Format("{0}{1}", item.Currency, Convert.ToDecimal(item.Balance).ToString("#,###.00"))
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.ActionLink(" ", "Create", "MemberPayments", new { id = item.ID }, new { @class = "glyphicon glyphicon-circle-arrow-right", @title = "make payment" })
+                </td>
+            </tr>
+            }
+
+            </table>
+        }
+    </div>
+
+</fieldset>

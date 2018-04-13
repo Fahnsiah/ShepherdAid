@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ShepherdAid.Models.Client>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-6 col-xs-12">
+
+    <div class="myinputarea">
+        
+        <div class="mybreadcrumb">
+            List of Clients
+        </div>
+
+        <div class="search-area">
+            <div class=" col-md-11 col-xs-11">
+                @using (Html.BeginForm())
+                {
+                    <div class="input-group">
+                        <input type="text" class="form-control search-field" placeholder="Search" id="search" name="search" />
+                        <div class="input-group-btn">
+                            <button class="btn btn-primary" type="submit">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+
+                        </div>
+                    </div>
+                    @*</form>*@
+                }
+            </div>
+            <div class="col-md-1 col-xs-1 new-record">
+                @Html.ActionLink(" ", "Create", new { }, new { @class = "glyphicon glyphicon-plus" })
+                @*<a href="~/Clients/Create" title="Create New"><span class="glyphicon glyphicon-plus"></span></a>*@
+            </div>
+        </div>
+        
+        <table class="table table-bordered table-responsive">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Initial)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Initial)
+                    </td>
+                    <td class="text-center nowrap">
+                        @Html.ActionLink(" ", "Edit", new { id = item.ID }, new { @class = "glyphicon glyphicon-edit", title = "Edit" }) |
+                        @Html.ActionLink(" ", "Details", new { id = item.ID }, new { @class = "glyphicon glyphicon-info-sign", title = "Detail" }) |
+                        @Html.ActionLink(" ", "Delete", new { id = item.ID }, new { @class = "glyphicon glyphicon-trash", title = "Delete" })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+
+</div>

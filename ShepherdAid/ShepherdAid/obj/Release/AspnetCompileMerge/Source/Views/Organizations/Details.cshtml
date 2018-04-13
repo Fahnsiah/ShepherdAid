@@ -1,0 +1,132 @@
+﻿@model ShepherdAid.Models.Organization
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    string organization = string.Format("{0}", Model.Name);
+
+}
+<div class="mybreadcrumb">
+    @Html.ActionLink("Organizations List", "Index", "Organizations") >>
+    Organization Detail
+</div>
+
+<fieldset>
+    <legend>DETAIL OF @organization</legend>
+
+    <div class="row">
+
+        <div class="col-md-4 col-sm-12">
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.ShortName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ShortName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.DateEstablished)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DateEstablished)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.OfficePhone)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.OfficePhone)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.MobilePhone)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MobilePhone)
+                </dd>
+            </dl>
+        </div>
+
+        <div class="col-md-4 col-sm-12">
+
+            <dl class="dl-horizontal">
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.OrganizationGenderType.TypeName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.OrganizationGenderType.TypeName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Website)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Website)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Purpose)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Purpose)
+                </dd>
+            </dl>
+        </div>
+
+        <div class="col-md-offset-2 col-md-2 col-sm-12 related-tasks">
+            <span class="related-tasks-header">RELATED TASKS</span><br />
+            @Html.ActionLink("Edit ", "Edit", new { id = @Model.ID }) <br />
+            @Html.ActionLink("Delete ", "Delete", new { id = @Model.ID }) <br />
+        </div>
+
+    </div>
+
+    <div class=" col-md-12">
+        <ul class="nav nav-tabs">
+            <li class="btn btn-default" id="member-li"><a href="#members-tab">Members</a></li>
+            <li class="btn btn-default" id="leader-li"><a href="#leaders-tab">Leadership</a></li>
+        </ul>
+
+        <section id="members-tab" class="tab-content hide">
+            <div id="divmembers">
+                @*member tab*@
+            </div>
+        </section>
+
+        <section id="leaders-tab" class="tab-content hide">
+            <div id="divleaders">
+                @*leader tab*@
+            </div>
+        </section>
+    </div>
+
+</fieldset>
+
+@section Scripts{
+    <script src="~/Scripts/Custom/tabs.js"></script>
+}
